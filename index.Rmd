@@ -1,9 +1,8 @@
---- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+---
+title: "R-Handbook"
+author: "Research Team AMSA-Indonesia 2024/2025"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Down the rabbit-hole
-
+# ![](images/1259777.jpg)Down the rabbit-hole
