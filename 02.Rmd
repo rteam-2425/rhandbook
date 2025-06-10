@@ -4,7 +4,7 @@ Penelitian primer adalah metode pengumpulan data langsung dari sumber asli, buka
 
 Dalam analisis data penelitian, regresi adalah teknik statistik yang digunakan untuk memahami hubungan antara variabel dependen dan independen. Regresi dapat diklasifikasikan menjadi univariate regression, di mana hanya ada satu variabel independen dan multivariate regression, di mana lebih dari satu variabel independen digunakan untuk memprediksi variabel dependen.
 
-## Bab 1: Simple VS Multiple
+## Simple VS Multiple
 
 ### Simple Primary Research
 
@@ -18,7 +18,7 @@ Multiple primary research adalah penelitian yang melibatkan lebih dari satu vari
 
 Keunggulan dari multiple research adalah kemampuannya untuk memberikan pemahaman yang lebih komprehensif terhadap suatu fenomena. Dengan mempertimbangkan berbagai faktor secara bersamaan, penelitian ini dapat menghasilkan wawasan yang lebih mendalam dan akurat. Namun, tantangannya adalah kompleksitas dalam desain penelitian, pengumpulan data yang lebih besar, serta kebutuhan akan teknik analisis yang lebih canggih untuk menginterpretasi hasil dengan benar.
 
-## Bab 2: Regresi Univariate dan Multivariate
+## Regresi Univariate dan Multivariate
 
 Regresi adalah metode statistik yang digunakan untuk menganalisis hubungan antara satu atau lebih variabel independen dengan variabel dependen. Metode ini memungkinkan peneliti untuk memahami bagaimana suatu variabel mempengaruhi variabel lainnya, serta membuat prediksi berdasarkan hubungan yang ditemukan. 
 
