@@ -1,4 +1,5 @@
-section
+contributor
+foreword
 primary-research
 bab-1-simple-vs-multiple
 simple-primary-research
