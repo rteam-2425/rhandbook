@@ -1,5 +1,11 @@
 section
 primary-research
+bab-1-simple-vs-multiple
+simple-primary-research
+multiple-primary-research
+bab-2-regresi-univariate-dan-multivariate
+regresi-univariate
+regresi-multivariate
 a-caucus-race-and-a-long-tale
 a-caucus-race-and-a-long-tale-1
 a-caucus-race-and-a-long-tale-2
