@@ -5,10 +5,8 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
+# R-Handbook 2024/2025 Updates
+
 ## Contributor
-
-
-
-
 
 ## Foreword

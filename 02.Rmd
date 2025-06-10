@@ -18,7 +18,6 @@ Multiple primary research adalah penelitian yang melibatkan lebih dari satu vari
 
 Keunggulan dari multiple research adalah kemampuannya untuk memberikan pemahaman yang lebih komprehensif terhadap suatu fenomena. Dengan mempertimbangkan berbagai faktor secara bersamaan, penelitian ini dapat menghasilkan wawasan yang lebih mendalam dan akurat. Namun, tantangannya adalah kompleksitas dalam desain penelitian, pengumpulan data yang lebih besar, serta kebutuhan akan teknik analisis yang lebih canggih untuk menginterpretasi hasil dengan benar.
 
-
 ## Bab 2: Regresi Univariate dan Multivariate
 
 Regresi adalah metode statistik yang digunakan untuk menganalisis hubungan antara satu atau lebih variabel independen dengan variabel dependen. Metode ini memungkinkan peneliti untuk memahami bagaimana suatu variabel mempengaruhi variabel lainnya, serta membuat prediksi berdasarkan hubungan yang ditemukan. 
@@ -26,7 +25,6 @@ Regresi adalah metode statistik yang digunakan untuk menganalisis hubungan antar
 Dalam penelitian kuantitatif, regresi sangat penting untuk menguji hipotesis dan menjelaskan pola hubungan dalam data. Dengan menggunakan teknik regresi, peneliti dapat mengukur kekuatan hubungan antarvariabel serta menentukan apakah hubungan tersebut bersifat signifikan secara statistik. Oleh karena itu, regresi sering kali menjadi alat utama dalam penelitian ilmiah, terutama yang melibatkan data numerik.
 
 Terdapat berbagai jenis regresi, tetapi dua yang paling umum digunakan adalah regresi univariate dan regresi multivariate. Regresi univariate hanya melibatkan satu variabel independen, sedangkan regresi multivariate melibatkan lebih dari satu variabel independen. Pemilihan jenis regresi tergantung pada kompleksitas hubungan yang ingin dianalisis dalam penelitian.
-
 
 ### Regresi Univariate
 
@@ -49,7 +47,6 @@ Keterangan :
 -   e adalah error atau kesalahan dalam model.
 
 Kelebihan regresi univariate adalah kemudahannya dalam interpretasi, karena hanya ada satu faktor yang dianalisis terhadap variabel dependen. Namun, kelemahannya adalah kurangnya kemampuan untuk menangkap faktor-faktor lain yang mungkin juga berpengaruh terhadap variabel dependen.
-
 
 ### Regresi Multivariate
 
