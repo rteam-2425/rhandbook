@@ -4,7 +4,7 @@ editor_options:
     wrap: 72
 ---
 
-# Meta Analisis Mean Difference (MD) dan Standardized Mean Difference (SMD)
+# Meta-Analisis Kontinu
 
 Pada setiap studi yang melibatkan nilai rata-rata dan standar deviasi,
 effect sizes yang diinginkan adalah (raw) mean difference dan
@@ -15,7 +15,7 @@ lebih lanjut mengenai mean difference dan standardized mean difference.
 
 ### Definisi
 
-Ketika hasil penelitian dilaporkandalam skala yang lazim digunakan dan
+Ketika hasil penelitian dilaporkan dalam skala yang lazim digunakan dan
 dalam skala yang sama untuk setiap studi, meta analisis dapat dilakukan
 secara langsung pada mean difference atau yang lebih awam disebut raw
 mean difference. Keuntungan yang paling signifikan untuk metode ini

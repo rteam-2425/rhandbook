@@ -1,4 +1,4 @@
-# Types of Secondary Research
+# Tipe-tipe Riset Sekunder
 
 Analisis data sekunder adalah metode penelitian yang memungkinkan peneliti untuk mengembangkan pengetahuan baru dengan memanfaatkan data yang sudah ada. Data ini bisa berupa data kuantitatif, kualitatif, atau gabungan dari keduanya, yang digunakan untuk menjawab pertanyaan penelitian yang baru.
 
@@ -40,11 +40,9 @@ Dalam proses pembuatan systematic review, peneliti perlu menyeleksi judul dan ab
 
 Studi yang termasuk dalam systematic review harus dinilai kualitasnya. Meskipun studi berkualitas rendah tidak boleh dieksklusikan bila memenuhi kriteria inklusi, systematic review harus menjelaskan bahwa semua penelitian yang disertakan telah dinilai menggunakan prinsip-prinsip penilaian kritis yang konsisten. Hasil penilaian ini juga harus disertakan dalam tinjauan. Jika tinjauan sistematis hanya mencakup artikel jurnal yang telah ditinjau oleh rekan sejawat dan dipublikasikan, maka daftar periksa dari CASP (Critical Appraisal Skills Programme), Centre for Evidence-Based Medicine, SIGN (Scottish Intercollegiate Guidelines Network), atau Joanna Briggs Institute dapat digunakan. Selain itu, terdapat alat penilaian risiko bias seperti RoBiS untuk mengevaluasi tinjauan sistematis, dan RoB 2 untuk mengevaluasi uji coba terkontrol secara acak.
 
-
 ## Literature Review
 
 Literature review adalah ringkasan objektif dan analisis kritis yang cermat dari literatur penelitian dan non-penelitian yang relevan dengan isu, area penelitian, atau teori tertentu. Tujuannya adalah untuk memberikan deskripsi, ringkasan, dan evaluasi kritis terhadap karya-karya tersebut. Literature review dirancang untuk memberikan gambaran umum tentang sumber yang telah dieksplorasi saat meneliti topik tertentu dan untuk menunjukkan kepada pembaca bagaimana penelitian Anda dapat menjadi  justifikasi untuk penelitian di masa depan.
-
 
 ## Meta-Analysis
 
@@ -52,11 +50,9 @@ Meta-analisis adalah metode statistik yang digunakan untuk menggabungkan hasil d
 
 Dalam meta-analisis, peneliti menghitung "Effect Size" dari setiap studi, yang menunjukkan arah dan kekuatan hubungan antara dua variabel. Ukuran efek ini merupakan metrik standar yang dapat dibandingkan di berbagai studi. Informasi dari setiap studi diekstraksi dan dimasukkan ke dalam basis data meta-analisis untuk menghitung ukuran efek masing-masing studi. Selanjutnya, semua ukuran efek dari setiap studi digabungkan untuk menentukan kekuatan dan arah asosiasi hubungan antar variabel pada tingkat agregat.
 
-
 ## Scoping Review
 
 Scoping review memiliki kemiripan dengan tinjauan sistematis, tetapi keduanya memiliki tujuan yang berbeda. Scoping review lebih menekankan pada identifikasi sifat, jumlah, atau karakteristik studi daripada melakukan sintesis data yang telah dipublikasikan. Scoping review sangat berguna untuk meneliti bukti-bukti yang masih belum jelas atau ketika pertanyaan penelitian yang lebih spesifik belum dapat dirumuskan dengan baik. Namun, karena sifatnya yang lebih luas dan heterogen, scoping review mungkin memiliki risiko bias yang lebih tinggi dibandingkan dengan tinjauan sistematis.
-
 
 **Referensi**
 

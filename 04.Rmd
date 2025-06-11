@@ -4,7 +4,7 @@ editor_options:
     wrap: 72
 ---
 
-# Types of Meta-Analysis
+# Tipe-tipe Meta-Analisis
 
 Meta-analisis adalah metode statistik yang menggabungkan hasil dari dua
 atau lebih studi independen yang membahas pertanyaan penelitian yang
@@ -21,7 +21,7 @@ dilakukan secara valid, penelitian yang dimasukkan dalam meta-analisis
 biasanya harus memiliki desain yang serupa, menggunakan metode
 pengukuran yang sama, dan/atau menerapkan intervensi yang sebanding.
 
-## Typical Meta-Analysis
+## Meta-Analisis Tipikal
 
 Typical Meta-Analysis/Pairwise Meta-analysis/Meta-analisis tradisional
 merupakan jenis meta-analisis yang paling umum digunakan. Metode ini
@@ -60,7 +60,7 @@ meliputi:
     kohort yang menganalisis waktu bertahan hidup pasien setelah
     menerima pengobatan tertentu.
 
-## Diagnostic Meta-Analysis
+## Meta-Analisis Diagnostik
 
 Meta-analisis diagnostik adalah jenis meta-analisis yang digunakan untuk
 mengevaluasi akurasi suatu tes diagnostik dengan menggabungkan hasil

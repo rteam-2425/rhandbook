@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>R-Handbook</title>
-  <meta name="description" content="R-Handbook" />
+  <title>Meta-Analisis Kontinu | R-Handbook</title>
+  <meta name="description" content="Meta-Analisis Kontinu | R-Handbook" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="R-Handbook" />
+  <meta property="og:title" content="Meta-Analisis Kontinu | R-Handbook" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="R-Handbook" />
+  <meta name="twitter:title" content="Meta-Analisis Kontinu | R-Handbook" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="riset-primer.html"/>
+<link rel="prev" href="tipe-tipe-meta-analisis.html"/>
+<link rel="next" href="meta-analisis-korelasi.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -262,18 +262,170 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">R-Handbook</h1>
-<p class="author"><em>Research Team AMSA-Indonesia 2024/2025</em></p>
-<p class="date"><em>2025-06-11</em></p>
+<div id="meta-analisis-kontinu" class="section level1 hasAnchor">
+<h1>Meta-Analisis Kontinu<a href="meta-analisis-kontinu.html#meta-analisis-kontinu" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Pada setiap studi yang melibatkan nilai rata-rata dan standar deviasi,
+effect sizes yang diinginkan adalah (raw) mean difference dan
+standardized mean difference. Di bagian ini, akan terdapat penjelasan
+lebih lanjut mengenai mean difference dan standardized mean difference.</p>
+<div id="mean-difference" class="section level2 hasAnchor">
+<h2>Mean Difference<a href="meta-analisis-kontinu.html#mean-difference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definisi" class="section level3 hasAnchor">
+<h3>Definisi<a href="meta-analisis-kontinu.html#definisi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ketika hasil penelitian dilaporkan dalam skala yang lazim digunakan dan
+dalam skala yang sama untuk setiap studi, meta analisis dapat dilakukan
+secara langsung pada mean difference atau yang lebih awam disebut raw
+mean difference. Keuntungan yang paling signifikan untuk metode ini
+adalah karena menggunakan skala yang berarti, hasil yang dihasilkan
+metode ini lebih mudah untuk disebarluaskan dan digunakan untuk pengguna
+yang lebih luas.</p>
 </div>
-<div id="r-handbook-20242025-updates" class="section level1 hasAnchor">
-<h1>R-Handbook 2024/2025 Updates<a href="index.html#r-handbook-20242025-updates" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="contributor" class="section level2 hasAnchor">
-<h2>Contributor<a href="index.html#contributor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="foreword" class="section level2 hasAnchor">
-<h2>Foreword<a href="index.html#foreword" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="standardized-mean-difference" class="section level2 hasAnchor">
+<h2>Standardized Mean Difference<a href="meta-analisis-kontinu.html#standardized-mean-difference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definisi-1" class="section level3 hasAnchor">
+<h3>Definisi<a href="meta-analisis-kontinu.html#definisi-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Jika pengukuran yang digunakan tidak terlalu lazim, penggunaan raw mean
+difference tidak terlalu direkomendasikan. Metode yang direkomendasikan
+merupakan standardized mean difference, dimana metode ini bisa digunakan
+untuk memfasilitasi studi-studi dengan instrumen penelitian yang berbeda
+untuk melihat hasil akhir (outcome) yang diinginkan. Dari studi-studi
+ini, dapat diambil standar deviasinya untuk membuat index yang dapat
+digunakan sebagai acuan perbandingan. Dua estimator SMD yang paling umum
+digunakan adalah Cohen’s d dan Hedges’ g.</p>
+</div>
+<div id="cohens-d" class="section level3 hasAnchor">
+<h3>Cohen’s d<a href="meta-analisis-kontinu.html#cohens-d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cohen’s d dihitung sebagai selisih antara rata-rata dua kelompok yang
+dibagi dengan standar deviasi gabungan (pooled standard deviation).
+Secara matematis, Cohen’s d direpresentasikan sebagai:</p>
+<div style="text-align: center;">
+<p><code>di​=(​yi1​-yi0​​)/siP​</code></p>
+</div>
+<p>di mana yi1​ adalah rata-rata kelompok perlakuan, yi0​ adalah rata-rata
+kelompok kontrol, dan siP adalah standar deviasi gabungan. Cohen’s d
+dapat mengalami bias, terutama ketika ukuran sampel kecil.</p>
+</div>
+<div id="hedges-g" class="section level3 hasAnchor">
+<h3>Hedges’ g<a href="meta-analisis-kontinu.html#hedges-g" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Hedges’ g adalah versi bias-corrected dari Cohen’s d. Metode ini
+menyesuaikan Cohen’s d dengan faktor koreksi untuk mengatasi bias akibat
+ukuran sampel yang kecil. Hedges’ g dihitung sebagai:</p>
+<div style="text-align: center;">
+<p><code>gᵢ = J(mᵢ) dᵢ</code></p>
+</div>
+<p>di mana J(mᵢ) adalah faktor koreksi, dan dᵢ adalah Cohen’s d. Hedges’ g
+dirancang untuk memberikan estimasi tak bias dari perbedaan rata-rata
+terstandarisasi, terutama saat menangani sampel berukuran kecil.</p>
+<div id="perhitungan-smd" class="section level4 hasAnchor">
+<h4>Perhitungan SMD<a href="meta-analisis-kontinu.html#perhitungan-smd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Untuk menghitung Standardized Mean Difference (SMD), ikuti
+langkah-langkah berikut:</p>
+<ol style="list-style-type: decimal">
+<li><p>Kumpulkan Data Ambil data rata-rata (mean), standar deviasi
+(standard deviation), dan ukuran sampel dari setiap penelitian yang
+digunakan.</p></li>
+<li><p>Hitung Cohen’s d atau Hedges’ g. Untuk Cohen’s d, standar deviasi
+gabungan (pooled standard deviation) dihitung dengan rumus berikut:</p>
+<p><img src="images/Screenshot%202025-06-11%20114907.png" width="275" /></p></li>
+<li><p>Lakukan Perhitungan untuk Setiap Studi Ulangi langkah perhitungan
+ini untuk setiap studi yang disertakan dalam meta-analysis.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="tutorial-r" class="section level2 hasAnchor">
+<h2>Tutorial R<a href="meta-analisis-kontinu.html#tutorial-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Link Dummy Table: <a href="https://docs.google.com/spreadsheets/d/1OUq7JFGv9IXvLZIKJfVMjNjLvXAKkSYy/edit?usp=sharing&amp;ouid=116098126709338312126&amp;rtpof=true&amp;sd=true" class="uri">Dummy
+Table</a></p>
+<p><strong>Tutorial Mean Difference di R</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Install paket meta (jalankan hanya sekali)</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="meta-analisis-kontinu.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;meta&quot;</span>)</span></code></pre></div></li>
+<li><p>Load paket meta</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="meta-analisis-kontinu.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(meta)</span></code></pre></div></li>
+<li><p>Memasukkan Data Studi dalam Data Frame</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="meta-analisis-kontinu.html#cb3-1" tabindex="-1"></a>data_md <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="at">study =</span> <span class="fu">c</span>(<span class="st">&quot;Studi 1&quot;</span>, <span class="st">&quot;Studi 2&quot;</span>, <span class="st">&quot;Studi 3&quot;</span>), <span class="at">mean_treat =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">78</span>, <span class="dv">90</span>), <span class="at">sd_treat =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">15</span>), <span class="at">n_treat =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">60</span>), <span class="at">mean_control =</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">75</span>, <span class="dv">85</span>), <span class="at">sd_control =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">14</span>), <span class="at">n_control =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">60</span>))</span></code></pre></div></li>
+<li><p>Analisis Meta untuk Mean Difference (MD)</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="meta-analisis-kontinu.html#cb4-1" tabindex="-1"></a>md_meta <span class="ot">&lt;-</span> <span class="fu">metacont</span>( <span class="at">n.e =</span> data_md<span class="sc">$</span>n_treat, <span class="at">mean.e =</span> data_md<span class="sc">$</span>mean_treat, <span class="at">sd.e =</span> data_md<span class="sc">$</span>sd_treat, <span class="at">n.c =</span> data_md<span class="sc">$</span>n_control, <span class="at">mean.c =</span> data_md<span class="sc">$</span>mean_control, <span class="at">sd.c =</span> data_md<span class="sc">$</span>sd_control, <span class="at">studlab =</span> data_md<span class="sc">$</span>study, <span class="at">sm =</span> <span class="st">&quot;MD&quot;</span>, )</span></code></pre></div></li>
+<li><p>Menampilkan Hasil MD</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="meta-analisis-kontinu.html#cb5-1" tabindex="-1"></a><span class="fu">summary</span>(md_meta)</span></code></pre></div></li>
+</ol>
+<pre><code>    MD             95%-CI %W(common) %W(random)
+    Studi 1 5.0000 [ 0.6703;  9.3297]       32.9       32.9
+    Studi 2 3.0000 [-0.7317;  6.7317]       44.3       44.3
+    Studi 3 5.0000 [-0.1917; 10.1917]       22.9       22.9
+
+
+    Number of studies: k = 3
+    Number of observations: o = 300 (o.e = 150, o.c = 150)
+
+
+                          MD           95%-CI    z p-value
+    Common effect model  4.1148 [1.6323; 6.5974] 3.25  0.0012
+    Random effects model 4.1148 [1.6323; 6.5974] 3.25  0.0012
+
+
+    Quantifying heterogeneity (with 95%-CIs):
+    tau^2 = 0 [0.0000; 48.2714]; tau = 0 [0.0000; 6.9478]
+    I^2 = 0.0% [0.0%; 89.6%]; H = 1.00 [1.00; 3.10]
+
+
+    Test of heterogeneity:
+        Q d.f. p-value
+    0.62    2  0.7353</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Visualisasi Forest Plot</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="meta-analisis-kontinu.html#cb7-1" tabindex="-1"></a><span class="fu">forest</span>(md_meta, <span class="at">col.diamond =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">col.square =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<p><img src="images/Screenshot%202025-06-11%20120335.png" /></p></li>
+</ol>
+<p><strong>Tutorial Standardized Mean Difference di R</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Install paket meta (jalankan hanya sekali)</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="meta-analisis-kontinu.html#cb8-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;meta&quot;</span>)</span></code></pre></div></li>
+<li><p>Load paket meta</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="meta-analisis-kontinu.html#cb9-1" tabindex="-1"></a><span class="fu">library</span>(meta)</span></code></pre></div></li>
+<li><p>Memasukkan Data Studi dalam Data Frame</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="meta-analisis-kontinu.html#cb10-1" tabindex="-1"></a>data_md <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="at">study =</span> <span class="fu">c</span>(<span class="st">&quot;Studi 1&quot;</span>, <span class="st">&quot;Studi 2&quot;</span>, <span class="st">&quot;Studi 3&quot;</span>), <span class="at">mean_treat =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">78</span>, <span class="dv">90</span>), <span class="at">sd_treat =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">15</span>), <span class="at">n_treat =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">60</span>), <span class="at">mean_control =</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">75</span>, <span class="dv">85</span>), <span class="at">sd_control =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">14</span>), <span class="at">n_control =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">60</span>))</span></code></pre></div></li>
+<li><p>Analisis Meta untuk Standardized Mean Difference (SMD)</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="meta-analisis-kontinu.html#cb11-1" tabindex="-1"></a>smd_meta <span class="ot">&lt;-</span> <span class="fu">metacont</span>( <span class="at">n.e =</span> data_md<span class="sc">$</span>n_treat, <span class="at">mean.e =</span> data_md<span class="sc">$</span>mean_treat, <span class="at">sd.e =</span> data_md<span class="sc">$</span>sd_treat, <span class="at">n.c =</span> data_md<span class="sc">$</span>n_control, <span class="at">mean.c =</span> data_md<span class="sc">$</span>mean_control, <span class="at">sd.c =</span> data_md<span class="sc">$</span>sd_control, <span class="at">studlab =</span> data_md<span class="sc">$</span>study, <span class="at">sm =</span> <span class="st">&quot;SMD&quot;</span>, <span class="at">method.smd =</span> <span class="st">&quot;Hedges&quot;</span> )</span></code></pre></div></li>
+<li><p>Menampilkan Hasil SMD</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="meta-analisis-kontinu.html#cb12-1" tabindex="-1"></a><span class="fu">summary</span>(smd_meta)</span></code></pre></div></li>
+</ol>
+<pre><code>           SMD            95%-CI %W(common) %W(random)
+        Studi 1 0.4492 [ 0.0521; 0.8463]       33.1       33.1
+        Studi 2 0.3489 [-0.0928; 0.7907]       26.7       26.7
+        Studi 3 0.3424 [-0.0181; 0.7030]       40.2       40.2
+
+    Number of studies: k = 3
+    Number of observations: o = 300 (o.e = 150, o.c = 150)
+
+
+                             SMD           95%-CI    z p-value
+    Common effect model  0.3795 [0.1511; 0.6080] 3.26  0.0011
+    Random effects model 0.3795 [0.1511; 0.6080] 3.26  0.0011
+
+
+    Quantifying heterogeneity (with 95%-CIs):
+    tau^2 = 0 [0.0000; 0.1007]; tau = 0 [0.0000; 0.3174]
+    I^2 = 0.0% [0.0%; 89.6%]; H = 1.00 [1.00; 3.10]
+
+
+    Test of heterogeneity:
+        Q d.f. p-value
+     0.18    2  0.9151</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Visualisasi Forest Plot</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="meta-analisis-kontinu.html#cb14-1" tabindex="-1"></a><span class="fu">forest</span>(smd_meta, <span class="at">col.diamond =</span> <span class="st">&quot;red&quot;</span>, <span class="at">col.square =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<p><img src="images/Screenshot%202025-06-11%20120325.png" /></p></li>
+</ol>
+<p><strong>Referensi</strong></p>
+<p>Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P.
+T. Higgins and H. R. Rothstein© 2009 John Wiley &amp; Sons, Ltd. ISBN:
+978-0-470-05724-7</p>
+<p>Lin L, Aloe AM. Evaluation of various estimators for standardized mean
+difference in meta-analysis. Stat Med. 2021 Jan 30;40(2):403–26.
+<a href="doi:10.1002/sim.8781" class="uri">doi:10.1002/sim.8781</a>.</p>
 
 </div>
 </div>
@@ -282,8 +434,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="riset-primer.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tipe-tipe-meta-analisis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="meta-analisis-korelasi.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -314,7 +466,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rteam-2425/rhandbook/edit/main/index.Rmd",
+    "link": "https://github.com/rteam-2425/rhandbook/edit/main/05.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -322,7 +474,7 @@ gitbook.start({
     "text": null
   },
   "view": {
-    "link": "https://github.com/rteam-2425/rhandbook/blob/main/index.Rmd",
+    "link": "https://github.com/rteam-2425/rhandbook/blob/main/05.Rmd",
     "text": null
   },
   "download": null,

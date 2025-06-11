@@ -1,1 +1,91 @@
-# A caucus-race and a long tale
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Meta-Analisis Proporsional
+
+Meta-analisis proporsional adalah metode statistik yang digunakan untuk
+menggabungkan hasil dari beberapa studi yang melaporkan proporsi suatu
+kejadian, seperti prevalensi penyakit atau tingkat keberhasilan
+pengobatan. Meta-analisis ini memungkinkan perhitungan estimasi
+keseluruhan yang lebih akurat dibandingkan hasil dari masing-masing
+studi individu.
+
+## Pengertian Meta-Analisis Proporsional
+
+Meta-analisis proporsional bertujuan untuk menghitung estimasi proporsi
+keseluruhan dari suatu kejadian dalam populasi tertentu dengan
+menggabungkan beberapa studi yang melaporkan proporsi serupa. Teknik ini
+sering digunakan dalam studi epidemiologi dan penelitian medis.
+
+## Tantangan dalam Meta-Analisis Proporsional
+
+Salah satu tantangan utama dalam meta-analisis proporsional adalah
+adanya perbedaan ukuran sampel antar studi dan variabilitas proporsi
+yang tinggi. Transformasi data sering kali diperlukan untuk mengatasi
+heterogenitas, terutama jika nilai proporsi mendekati 0% atau 100%.
+
+## Persiapan Data dan Transformasi
+
+Data yang digunakan dalam meta-analisis proporsional biasanya terdiri
+dari jumlah kejadian dan total sampel dalam masing-masing studi.
+Transformasi seperti Freeman-Tukey Double Arcsine digunakan untuk
+menstabilkan varians sebelum analisis dilakukan.
+
+Contoh Kode R untuk Meta-Analisis Proporsional
+
+1.  Instalasi package
+
+    ``` r
+    install.packages(c("meta","metafor")) 
+    ```
+
+2.  Pemanggilan package
+
+    ``` r
+    library(meta)
+    library(metafor) 
+    ```
+
+3.  Memasukkan data dalam bentuk data frame
+
+    ``` r
+    data_prop <- data.frame(study = c("Studi 1", "Studi 2", "Studi 3", "Studi 4"), events = c(50, 30, 70, 90),total = c(100, 80, 150, 200)) 
+    ```
+
+4.  Transformasi data
+
+    ``` r
+    data_prop$trans_prop <- transf.ftarc(data_prop$events / data_prop$total)
+    ```
+
+5.  Meta-analisis proporsi
+
+    ``` r
+    meta_prop <- metaprop(event = data_prop$events, n = data_prop$total,   studlab = data_prop$study, method = "Inverse", sm = "PLOGIT", random = TRUE ) summary(meta_prop) forest(meta_prop, col.diamond = "blue", col.square = "black") 
+    ```
+
+6.  Hasil
+
+    ``` R
+    summary(meta_prop)
+    ```
+
+7.  Forest plot
+
+    ``` R
+    forest(meta_prop)
+    ```
+
+**Referensi**
+
+Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to
+Meta-Analysis. Wiley;2009.
+
+Barendregt JJ, Doi SA, Lee YY, Norman RE, Vos T. Meta-analysis of
+prevalence. J EpidemiolCommunity Health. 2013;67(11):974-8.
+
+Freeman MF, Tukey JW. Transformations related to the angular and square
+root. Ann Math Stat. 1950;21(4):607-611.

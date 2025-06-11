@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>R-Handbook</title>
-  <meta name="description" content="R-Handbook" />
+  <title>Meta-Analisis Proporsional | R-Handbook</title>
+  <meta name="description" content="Meta-Analisis Proporsional | R-Handbook" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="R-Handbook" />
+  <meta property="og:title" content="Meta-Analisis Proporsional | R-Handbook" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="R-Handbook" />
+  <meta name="twitter:title" content="Meta-Analisis Proporsional | R-Handbook" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="riset-primer.html"/>
+<link rel="prev" href="meta-analisis-korelasi.html"/>
+<link rel="next" href="meta-analisis-data-biner.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -262,18 +262,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">R-Handbook</h1>
-<p class="author"><em>Research Team AMSA-Indonesia 2024/2025</em></p>
-<p class="date"><em>2025-06-11</em></p>
+<div id="meta-analisis-proporsional" class="section level1 hasAnchor">
+<h1>Meta-Analisis Proporsional<a href="meta-analisis-proporsional.html#meta-analisis-proporsional" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Meta-analisis proporsional adalah metode statistik yang digunakan untuk
+menggabungkan hasil dari beberapa studi yang melaporkan proporsi suatu
+kejadian, seperti prevalensi penyakit atau tingkat keberhasilan
+pengobatan. Meta-analisis ini memungkinkan perhitungan estimasi
+keseluruhan yang lebih akurat dibandingkan hasil dari masing-masing
+studi individu.</p>
+<div id="pengertian-meta-analisis-proporsional" class="section level2 hasAnchor">
+<h2>Pengertian Meta-Analisis Proporsional<a href="meta-analisis-proporsional.html#pengertian-meta-analisis-proporsional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Meta-analisis proporsional bertujuan untuk menghitung estimasi proporsi
+keseluruhan dari suatu kejadian dalam populasi tertentu dengan
+menggabungkan beberapa studi yang melaporkan proporsi serupa. Teknik ini
+sering digunakan dalam studi epidemiologi dan penelitian medis.</p>
 </div>
-<div id="r-handbook-20242025-updates" class="section level1 hasAnchor">
-<h1>R-Handbook 2024/2025 Updates<a href="index.html#r-handbook-20242025-updates" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="contributor" class="section level2 hasAnchor">
-<h2>Contributor<a href="index.html#contributor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="tantangan-dalam-meta-analisis-proporsional" class="section level2 hasAnchor">
+<h2>Tantangan dalam Meta-Analisis Proporsional<a href="meta-analisis-proporsional.html#tantangan-dalam-meta-analisis-proporsional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Salah satu tantangan utama dalam meta-analisis proporsional adalah
+adanya perbedaan ukuran sampel antar studi dan variabilitas proporsi
+yang tinggi. Transformasi data sering kali diperlukan untuk mengatasi
+heterogenitas, terutama jika nilai proporsi mendekati 0% atau 100%.</p>
 </div>
-<div id="foreword" class="section level2 hasAnchor">
-<h2>Foreword<a href="index.html#foreword" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="persiapan-data-dan-transformasi" class="section level2 hasAnchor">
+<h2>Persiapan Data dan Transformasi<a href="meta-analisis-proporsional.html#persiapan-data-dan-transformasi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Data yang digunakan dalam meta-analisis proporsional biasanya terdiri
+dari jumlah kejadian dan total sampel dalam masing-masing studi.
+Transformasi seperti Freeman-Tukey Double Arcsine digunakan untuk
+menstabilkan varians sebelum analisis dilakukan.</p>
+<p>Contoh Kode R untuk Meta-Analisis Proporsional</p>
+<ol style="list-style-type: decimal">
+<li><p>Instalasi package</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="meta-analisis-proporsional.html#cb21-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;meta&quot;</span>,<span class="st">&quot;metafor&quot;</span>)) </span></code></pre></div></li>
+<li><p>Pemanggilan package</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="meta-analisis-proporsional.html#cb22-1" tabindex="-1"></a><span class="fu">library</span>(meta)</span>
+<span id="cb22-2"><a href="meta-analisis-proporsional.html#cb22-2" tabindex="-1"></a><span class="fu">library</span>(metafor) </span></code></pre></div></li>
+<li><p>Memasukkan data dalam bentuk data frame</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="meta-analisis-proporsional.html#cb23-1" tabindex="-1"></a>data_prop <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">study =</span> <span class="fu">c</span>(<span class="st">&quot;Studi 1&quot;</span>, <span class="st">&quot;Studi 2&quot;</span>, <span class="st">&quot;Studi 3&quot;</span>, <span class="st">&quot;Studi 4&quot;</span>), <span class="at">events =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">30</span>, <span class="dv">70</span>, <span class="dv">90</span>),<span class="at">total =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">80</span>, <span class="dv">150</span>, <span class="dv">200</span>)) </span></code></pre></div></li>
+<li><p>Transformasi data</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="meta-analisis-proporsional.html#cb24-1" tabindex="-1"></a>data_prop<span class="sc">$</span>trans_prop <span class="ot">&lt;-</span> <span class="fu">transf.ftarc</span>(data_prop<span class="sc">$</span>events <span class="sc">/</span> data_prop<span class="sc">$</span>total)</span></code></pre></div></li>
+<li><p>Meta-analisis proporsi</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="meta-analisis-proporsional.html#cb25-1" tabindex="-1"></a>meta_prop <span class="ot">&lt;-</span> <span class="fu">metaprop</span>(<span class="at">event =</span> data_prop<span class="sc">$</span>events, <span class="at">n =</span> data_prop<span class="sc">$</span>total,   <span class="at">studlab =</span> data_prop<span class="sc">$</span>study, <span class="at">method =</span> <span class="st">&quot;Inverse&quot;</span>, <span class="at">sm =</span> <span class="st">&quot;PLOGIT&quot;</span>, <span class="at">random =</span> <span class="cn">TRUE</span> ) <span class="fu">summary</span>(meta_prop) <span class="fu">forest</span>(meta_prop, <span class="at">col.diamond =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">col.square =</span> <span class="st">&quot;black&quot;</span>) </span></code></pre></div></li>
+<li><p>Hasil</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="meta-analisis-proporsional.html#cb26-1" tabindex="-1"></a><span class="fu">summary</span>(meta_prop)</span></code></pre></div></li>
+<li><p>Forest plot</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="meta-analisis-proporsional.html#cb27-1" tabindex="-1"></a><span class="fu">forest</span>(meta_prop)</span></code></pre></div></li>
+</ol>
+<p><strong>Referensi</strong></p>
+<p>Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to
+Meta-Analysis. Wiley;2009.</p>
+<p>Barendregt JJ, Doi SA, Lee YY, Norman RE, Vos T. Meta-analysis of
+prevalence. J EpidemiolCommunity Health. 2013;67(11):974-8.</p>
+<p>Freeman MF, Tukey JW. Transformations related to the angular and square
+root. Ann Math Stat. 1950;21(4):607-611.</p>
 
 </div>
 </div>
@@ -282,8 +323,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="riset-primer.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="meta-analisis-korelasi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="meta-analisis-data-biner.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -314,7 +355,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rteam-2425/rhandbook/edit/main/index.Rmd",
+    "link": "https://github.com/rteam-2425/rhandbook/edit/main/07.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -322,7 +363,7 @@ gitbook.start({
     "text": null
   },
   "view": {
-    "link": "https://github.com/rteam-2425/rhandbook/blob/main/index.Rmd",
+    "link": "https://github.com/rteam-2425/rhandbook/blob/main/07.Rmd",
     "text": null
   },
   "download": null,

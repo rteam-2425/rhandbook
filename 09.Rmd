@@ -1,1 +1,95 @@
-# A caucus-race and a long tale
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Robvis Tool for Visualization
+
+robvis adalah aplikasi web yang dirancang untuk memvisualisasikan
+penilaian risiko bias yang dilakukan sebagai bagian dari tinjauan
+sistematis. Alat ini menciptakan:
+
+1.  plot “lampu lalu lintas” dari penilaian tingkat domain untuk setiap
+    hasil individu; dan
+
+2.  plot batang berbobot dari distribusi penilaian risiko bias dalam
+    setiap domain bias.
+
+Angka-angka tersebut memiliki kualitas publikasi, dan diformat sesuai
+dengan alat penilaian risiko bias yang digunakan untuk melakukan
+penilaian (misalnya RoB 2, ROBINS-I, atau QUADAS-2). Langkah-langkah
+Akses robvis tool Tautan dapat diakses pada
+<https://mcguinlu.shinyapps.io/robvis/>
+
+## Menyiapkan data
+
+Untuk memastikan aplikasi ini bekerja sesuai dengan yang diharapkan,
+tabel ringkasan penilaian risiko bias yang diunggah harus mengikuti
+format sebagai berikut:
+
+1.  Kolom pertama berisi rincian tentang studi seperti penulis dan tahun
+    publikasi.
+
+2.  Kolom kedua dan selanjutnya berisi penilaian di setiap domain alat
+    penilaian.
+
+3.  Jumlah kolom yang berisi penilaian tingkat domain akan bervariasi
+    tergantung pada alat yang digunakan.
+
+## Unduh *template*
+
+-   Unduh template tabel sesuai jenis artikel yang akan dinilai.
+
+    ![](images/Screenshot%202025-06-11%20170630.png)
+
+-   Buka unduhan pada file explorer atau upload pada sebagai google
+    sheet untuk menyunting data
+
+    ![](images/Screenshot%202025-06-11%20170702.png)
+
+## Mengunggah data
+
+-   Setelah disunting sesuai dengan penilaian anda, klik “upload your
+    data”
+
+    ![](images/Screenshot%202025-06-11%20170729.png)
+
+-   Klik “choose”
+
+    ![](images/Screenshot%202025-06-11%20170810.png)
+
+-   Pilih penilaian risk of bias yang sesuai
+
+    ![](images/Screenshot 2025-06-11 170905.png)
+
+-   Klik “browse”
+
+    ![](images/Screenshot 2025-06-11 170935.png)
+
+-   Unggah data anda
+
+    ![](images/Screenshot 2025-06-11 171029.png)
+
+-   Tinjau ulang
+
+    ![](images/Screenshot 2025-06-11 171047.png)
+
+## Visualisasi risk of bias
+
+-   Klik “Generate Plots”
+
+    ![](images/Screenshot 2025-06-11 171120.png){width="321"}
+
+-   Klik “Download Plots”
+
+    ![](images/Screenshot 2025-06-11 171149.png)
+
+-   Plots akan otomatis tersimpan dalam file explorer anda
+
+-   Apabila anda ingin summary plot, maka klik “summary plot” lalu klik
+    “download plot”
+
+    ![](images/Screenshot 2025-06-11 171209.png)
+
+-   Plot akan otomatis tersimpan dalam file explorer anda
