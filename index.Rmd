@@ -7,6 +7,38 @@ site: bookdown::bookdown_site
 
 # R-Handbook 2024/2025 Updates
 
-## Contributor
-
 ## Foreword
+
+## Contributors
+
++:------------------------------------------------------------:+:------------------------------------------------------------:+
+| <img src="images/diw.png" class="centered-img" width="134"/> | <img src="images/ara.png" class="centered-img" width="134"/> |
+|                                                              |                                                              |
+| **Widya Khairunisa**                                         | **Nurul Fathiah Azzahra**                                    |
+|                                                              |                                                              |
+| Research Team District 1                                     | Research Team District 1                                     |
++--------------------------------------------------------------+--------------------------------------------------------------+
+
++:--------------------------------------------------------------:+:------------------------------------------------------------:+:------------------------------------------------------------:+
+| <img src="images/robby.png" class="centered-img" width="134"/> | <img src="images/joy.png" class="centered-img" width="134"/> | <img src="images/nat.png" class="centered-img" width="134"/> |
+|                                                                |                                                              |                                                              |
+| **Robby Malik Chandra S.**                                     | **Joyceline Chika Tanely**                                   | **Maria Sri Crishnatalia W.**                                |
+|                                                                |                                                              |                                                              |
+| Research Team District 2                                       | Research Team District 2                                     | Research Team District 3                                     |
++----------------------------------------------------------------+--------------------------------------------------------------+--------------------------------------------------------------+
+
++:---------------------------------------------------------------:+:-----------------------------------------------------------:+:---------------------------------------------------------------:+
+| <img src="images/malika.png" class="centered-img" width="134"/> | <img src="images/mp.png" class="centered-img" width="134"/> | <img src="images/hafiez.png" class="centered-img" width="134"/> |
+|                                                                 |                                                             |                                                                 |
+| **Malika Syaharani**                                            | **Michael Purnama**                                         | **Al Hafiez Ariouso**                                           |
+|                                                                 |                                                             |                                                                 |
+| Research Team District 4                                        | Research Team District 5                                    | Research Team District 5                                        |
++-----------------------------------------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
+
++:--------------------------------------------------------------:+:-------------------------------------------------------------:+
+| <img src="images/ghita.png" class="centered-img" width="134"/> | <img src="images/juna.png" class="centered-img" width="134"/> |
+|                                                                |                                                               |
+| **Putrina Happy Ughita**                                       | **Arjuna Datu Mangontan**                                     |
+|                                                                |                                                               |
+| Research Team District 6                                       | Research Team District 6                                      |
++----------------------------------------------------------------+---------------------------------------------------------------+

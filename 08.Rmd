@@ -6,10 +6,11 @@ Ketika membahas Odds Ratio (OR) dan Risk Ratio (RR) dalam analisis data dikotomi
 
 Berikut adalah tampilan tabel 2×2 yang sering digunakan dalam analisis data klinis:
 
-|                    | Sakit (kasus) | Sehat | Total |
-|--------------------|---------------|-------|-------|
-| **Terpapar**       | a             | b     | a+b   |
-| **Tidak Terpapar** | c             | d     | c+d   |
+|                    |                   |           |           |
+|--------------------|-------------------|-----------|-----------|
+|                    | **Sakit (kasus)** | **Sehat** | **Total** |
+| **Terpapar**       | a                 | b         | a+b       |
+| **Tidak Terpapar** | c                 | d         | c+d       |
 
 ## Definisi dan Konsep Dasar
 

@@ -12,3 +12,18 @@ pre {
 pre code {
   white-space: inherit;
 }
+.centered-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+table {
+  border-top: none !important;
+  border-bottom: none !important;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: none !important;
+  box-shadow: none !important;
+}
