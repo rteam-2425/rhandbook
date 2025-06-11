@@ -160,7 +160,7 @@ Details on meta-analytical method:
 
 5.  Membuat forest plot
 
-    ``` R
+    ``` r
     forest(m.cor)
     ```
 
@@ -170,7 +170,7 @@ Kirch W. Encyclopedia of public health. Dordrecht: Springer, Cop; 2008.
 
 Schwarzer G, Carpenter JR, Rücker G. Meta-Analysis with R [Internet].
 Use R! Cham: Springer International Publishing; 2015. Available from:
-https://link.springer.com/book/10.1007%2F978-3-319-21416-0
+<https://link.springer.com/book/10.1007%2F978-3-319-21416-0>
 
 Yadolah Dodge. The concise encyclopedia of statistics. Germany ; London:
 Springer; 2008.
