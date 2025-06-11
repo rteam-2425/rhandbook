@@ -32,7 +32,9 @@ Regresi univariate adalah jenis regresi yang hanya melibatkan satu variabel inde
 
 model regresi akan berbentuk:
 
+::: {style="text-align: center;"}
  `Y = a + bX + e` 
+::: 
 
 Keterangan :
 
@@ -54,7 +56,9 @@ Regresi multivariate melibatkan lebih dari satu variabel independen yang dianali
 
 Model regresinya akan berbentuk :
 
- `Y = a + b1.X1 + b2.X2 + e` 
+::: {style="text-align: center;"}
+`Y = a + b1.X1 + b2.X2 + e` 
+::: 
 
 Keterangan :
 
