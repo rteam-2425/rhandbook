@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Meta Analisis Mean Difference (MD) dan Standardized Mean Difference (SMD) | R-Handbook</title>
+  <meta name="description" content="Meta Analisis Mean Difference (MD) dan Standardized Mean Difference (SMD) | R-Handbook" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Meta Analisis Mean Difference (MD) dan Standardized Mean Difference (SMD) | R-Handbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Meta Analisis Mean Difference (MD) dan Standardized Mean Difference (SMD) | R-Handbook" />
+  
+  
+  
+
+<meta name="author" content="Research Team AMSA-Indonesia 2024/2025" />
+
+
+<meta name="date" content="2025-06-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="types-of-meta-analysis.html"/>
+<link rel="next" href="a-caucus-race-and-a-long-tale.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">R-Handbook</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>R-Handbook 2024/2025 Updates</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributor"><i class="fa fa-check"></i>Contributor</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#foreword"><i class="fa fa-check"></i>Foreword</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="primary-research.html"><a href="primary-research.html"><i class="fa fa-check"></i>Primary Research</a>
+<ul>
+<li class="chapter" data-level="" data-path="primary-research.html"><a href="primary-research.html#simple-vs-multiple"><i class="fa fa-check"></i>Simple VS Multiple</a>
+<ul>
+<li class="chapter" data-level="" data-path="primary-research.html"><a href="primary-research.html#simple-primary-research"><i class="fa fa-check"></i>Simple Primary Research</a></li>
+<li class="chapter" data-level="" data-path="primary-research.html"><a href="primary-research.html#multiple-primary-research"><i class="fa fa-check"></i>Multiple Primary Research</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="primary-research.html"><a href="primary-research.html#regresi-univariate-dan-multivariate"><i class="fa fa-check"></i>Regresi Univariate dan Multivariate</a>
+<ul>
+<li class="chapter" data-level="" data-path="primary-research.html"><a href="primary-research.html#regresi-univariate"><i class="fa fa-check"></i>Regresi Univariate</a></li>
+<li class="chapter" data-level="" data-path="primary-research.html"><a href="primary-research.html#regresi-multivariate"><i class="fa fa-check"></i>Regresi Multivariate</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html"><i class="fa fa-check"></i>Types of Secondary Research</a>
+<ul>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html#systematic-review"><i class="fa fa-check"></i>Systematic Review</a>
+<ul>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html#introduction-to-systematic-review"><i class="fa fa-check"></i>Introduction to Systematic Review</a></li>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html#topic-selection-and-planning"><i class="fa fa-check"></i>Topic selection and planning</a></li>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html#reporting-standards-and-structure"><i class="fa fa-check"></i>Reporting standards and structure</a></li>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html#search-strategy"><i class="fa fa-check"></i>Search strategy</a></li>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html#critical-appraisal-tools"><i class="fa fa-check"></i>Critical appraisal tools</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html#literature-review"><i class="fa fa-check"></i>Literature Review</a></li>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html#meta-analysis"><i class="fa fa-check"></i>Meta-Analysis</a></li>
+<li class="chapter" data-level="" data-path="types-of-secondary-research.html"><a href="types-of-secondary-research.html#scoping-review"><i class="fa fa-check"></i>Scoping Review</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="types-of-meta-analysis.html"><a href="types-of-meta-analysis.html"><i class="fa fa-check"></i>Types of Meta-Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="types-of-meta-analysis.html"><a href="types-of-meta-analysis.html#typical-meta-analysis"><i class="fa fa-check"></i>Typical Meta-Analysis</a></li>
+<li class="chapter" data-level="" data-path="types-of-meta-analysis.html"><a href="types-of-meta-analysis.html#diagnostic-meta-analysis"><i class="fa fa-check"></i>Diagnostic Meta-Analysis</a></li>
+<li class="chapter" data-level="" data-path="types-of-meta-analysis.html"><a href="types-of-meta-analysis.html#network-meta-analysis"><i class="fa fa-check"></i>Network Meta-Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><i class="fa fa-check"></i>Meta Analisis Mean Difference (MD) dan Standardized Mean Difference (SMD)</a>
+<ul>
+<li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#mean-difference"><i class="fa fa-check"></i>Mean Difference</a>
+<ul>
+<li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#definisi"><i class="fa fa-check"></i>Definisi</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#standardized-mean-difference"><i class="fa fa-check"></i>Standardized Mean Difference</a>
+<ul>
+<li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#definisi-1"><i class="fa fa-check"></i>Definisi</a></li>
+<li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cohens-d"><i class="fa fa-check"></i>Cohen’s d</a></li>
+<li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#hedges-g"><i class="fa fa-check"></i>Hedges’ g</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#tutorial-r"><i class="fa fa-check"></i>Tutorial R</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="a-caucus-race-and-a-long-tale.html"><a href="a-caucus-race-and-a-long-tale.html"><i class="fa fa-check"></i>A caucus-race and a long tale</a></li>
+<li class="chapter" data-level="" data-path="a-caucus-race-and-a-long-tale-1.html"><a href="a-caucus-race-and-a-long-tale-1.html"><i class="fa fa-check"></i>A caucus-race and a long tale</a></li>
+<li class="chapter" data-level="" data-path="a-caucus-race-and-a-long-tale-2.html"><a href="a-caucus-race-and-a-long-tale-2.html"><i class="fa fa-check"></i>A caucus-race and a long tale</a></li>
+<li class="chapter" data-level="" data-path="a-caucus-race-and-a-long-tale-3.html"><a href="a-caucus-race-and-a-long-tale-3.html"><i class="fa fa-check"></i>A caucus-race and a long tale</a></li>
+<li class="chapter" data-level="" data-path="a-caucus-race-and-a-long-tale-4.html"><a href="a-caucus-race-and-a-long-tale-4.html"><i class="fa fa-check"></i>A caucus-race and a long tale</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R-Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd" class="section level1 hasAnchor">
+<h1>Meta Analisis Mean Difference (MD) dan Standardized Mean Difference (SMD)<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Pada setiap studi yang melibatkan nilai rata-rata dan standar deviasi,
+effect sizes yang diinginkan adalah (raw) mean difference dan
+standardized mean difference. Di bagian ini, akan terdapat penjelasan
+lebih lanjut mengenai mean difference dan standardized mean difference.</p>
+<div id="mean-difference" class="section level2 hasAnchor">
+<h2>Mean Difference<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#mean-difference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definisi" class="section level3 hasAnchor">
+<h3>Definisi<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#definisi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ketika hasil penelitian dilaporkandalam skala yang lazim digunakan dan
+dalam skala yang sama untuk setiap studi, meta analisis dapat dilakukan
+secara langsung pada mean difference atau yang lebih awam disebut raw
+mean difference. Keuntungan yang paling signifikan untuk metode ini
+adalah karena menggunakan skala yang berarti, hasil yang dihasilkan
+metode ini lebih mudah untuk disebarluaskan dan digunakan untuk pengguna
+yang lebih luas.</p>
+</div>
+</div>
+<div id="standardized-mean-difference" class="section level2 hasAnchor">
+<h2>Standardized Mean Difference<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#standardized-mean-difference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definisi-1" class="section level3 hasAnchor">
+<h3>Definisi<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#definisi-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Jika pengukuran yang digunakan tidak terlalu lazim, penggunaan raw mean
+difference tidak terlalu direkomendasikan. Metode yang direkomendasikan
+merupakan standardized mean difference, dimana metode ini bisa digunakan
+untuk memfasilitasi studi-studi dengan instrumen penelitian yang berbeda
+untuk melihat hasil akhir (outcome) yang diinginkan. Dari studi-studi
+ini, dapat diambil standar deviasinya untuk membuat index yang dapat
+digunakan sebagai acuan perbandingan. Dua estimator SMD yang paling umum
+digunakan adalah Cohen’s d dan Hedges’ g.</p>
+</div>
+<div id="cohens-d" class="section level3 hasAnchor">
+<h3>Cohen’s d<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cohens-d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cohen’s d dihitung sebagai selisih antara rata-rata dua kelompok yang
+dibagi dengan standar deviasi gabungan (pooled standard deviation).
+Secara matematis, Cohen’s d direpresentasikan sebagai:</p>
+<div style="text-align: center;">
+<p><code>di​=(​yi1​-yi0​​)/siP​</code></p>
+</div>
+<p>di mana yi1​ adalah rata-rata kelompok perlakuan, yi0​ adalah rata-rata
+kelompok kontrol, dan siP adalah standar deviasi gabungan. Cohen’s d
+dapat mengalami bias, terutama ketika ukuran sampel kecil.</p>
+</div>
+<div id="hedges-g" class="section level3 hasAnchor">
+<h3>Hedges’ g<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#hedges-g" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Hedges’ g adalah versi bias-corrected dari Cohen’s d. Metode ini
+menyesuaikan Cohen’s d dengan faktor koreksi untuk mengatasi bias akibat
+ukuran sampel yang kecil. Hedges’ g dihitung sebagai:</p>
+<div style="text-align: center;">
+<p><code>gᵢ = J(mᵢ) dᵢ</code></p>
+</div>
+<p>di mana J(mᵢ) adalah faktor koreksi, dan dᵢ adalah Cohen’s d. Hedges’ g
+dirancang untuk memberikan estimasi tak bias dari perbedaan rata-rata
+terstandarisasi, terutama saat menangani sampel berukuran kecil.</p>
+<div id="perhitungan-smd" class="section level4 hasAnchor">
+<h4>Perhitungan SMD<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#perhitungan-smd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Untuk menghitung Standardized Mean Difference (SMD), ikuti
+langkah-langkah berikut:</p>
+<ol style="list-style-type: decimal">
+<li><p>Kumpulkan Data Ambil data rata-rata (mean), standar deviasi
+(standard deviation), dan ukuran sampel dari setiap penelitian yang
+digunakan.</p></li>
+<li><p>Hitung Cohen’s d atau Hedges’ g. Untuk Cohen’s d, standar deviasi
+gabungan (pooled standard deviation) dihitung dengan rumus berikut:</p>
+<p><img src="images/Screenshot%202025-06-11%20114907.png" width="275" /></p></li>
+<li><p>Lakukan Perhitungan untuk Setiap Studi Ulangi langkah perhitungan
+ini untuk setiap studi yang disertakan dalam meta-analysis.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="tutorial-r" class="section level2 hasAnchor">
+<h2>Tutorial R<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#tutorial-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Link Dummy Table:
+<a href="https://docs.google.com/spreadsheets/d/1OUq7JFGv9IXvLZIKJfVMjNjLvXAKkSYy/edit" class="uri">https://docs.google.com/spreadsheets/d/1OUq7JFGv9IXvLZIKJfVMjNjLvXAKkSYy/edit</a>?
+usp=sharing&amp;ouid=104571729736483527245&amp;rtpof=true&amp;sd=true</p>
+<p><strong>Tutorial Mean Difference di R</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Install paket meta (jalankan hanya sekali)</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;meta&quot;</span>)</span></code></pre></div></li>
+<li><p>Load paket meta</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(meta)</span></code></pre></div></li>
+<li><p>Memasukkan Data Studi dalam Data Frame</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb3-1" tabindex="-1"></a>data_md <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="at">study =</span> <span class="fu">c</span>(<span class="st">&quot;Studi 1&quot;</span>, <span class="st">&quot;Studi 2&quot;</span>, <span class="st">&quot;Studi 3&quot;</span>), <span class="at">mean_treat =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">78</span>, <span class="dv">90</span>), <span class="at">sd_treat =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">15</span>), <span class="at">n_treat =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">60</span>), <span class="at">mean_control =</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">75</span>, <span class="dv">85</span>), <span class="at">sd_control =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">14</span>), <span class="at">n_control =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">60</span>))</span></code></pre></div></li>
+<li><p>Analisis Meta untuk Mean Difference (MD)</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb4-1" tabindex="-1"></a>md_meta <span class="ot">&lt;-</span> <span class="fu">metacont</span>( <span class="at">n.e =</span> data_md<span class="sc">$</span>n_treat, <span class="at">mean.e =</span> data_md<span class="sc">$</span>mean_treat, <span class="at">sd.e =</span> data_md<span class="sc">$</span>sd_treat, <span class="at">n.c =</span> data_md<span class="sc">$</span>n_control, <span class="at">mean.c =</span> data_md<span class="sc">$</span>mean_control, <span class="at">sd.c =</span> data_md<span class="sc">$</span>sd_control, <span class="at">studlab =</span> data_md<span class="sc">$</span>study, <span class="at">sm =</span> <span class="st">&quot;MD&quot;</span>, )</span></code></pre></div></li>
+<li><p>Menampilkan Hasil MD</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb5-1" tabindex="-1"></a><span class="fu">summary</span>(md_meta)</span></code></pre></div></li>
+</ol>
+<pre><code>    MD             95%-CI %W(common) %W(random)
+    Studi 1 5.0000 [ 0.6703;  9.3297]       32.9       32.9
+    Studi 2 3.0000 [-0.7317;  6.7317]       44.3       44.3
+    Studi 3 5.0000 [-0.1917; 10.1917]       22.9       22.9
+
+
+    Number of studies: k = 3
+    Number of observations: o = 300 (o.e = 150, o.c = 150)
+
+
+                          MD           95%-CI    z p-value
+    Common effect model  4.1148 [1.6323; 6.5974] 3.25  0.0012
+    Random effects model 4.1148 [1.6323; 6.5974] 3.25  0.0012
+
+
+    Quantifying heterogeneity (with 95%-CIs):
+    tau^2 = 0 [0.0000; 48.2714]; tau = 0 [0.0000; 6.9478]
+    I^2 = 0.0% [0.0%; 89.6%]; H = 1.00 [1.00; 3.10]
+
+
+    Test of heterogeneity:
+        Q d.f. p-value
+    0.62    2  0.7353</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Visualisasi Forest Plot</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb7-1" tabindex="-1"></a><span class="fu">forest</span>(md_meta, <span class="at">col.diamond =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">col.square =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<p><img src="images/Screenshot%202025-06-11%20120335.png" /></p></li>
+</ol>
+<p><strong>Tutorial Standardized Mean Difference di R</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Install paket meta (jalankan hanya sekali)</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb8-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;meta&quot;</span>)</span></code></pre></div></li>
+<li><p>Load paket meta</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb9-1" tabindex="-1"></a><span class="fu">library</span>(meta)</span></code></pre></div></li>
+<li><p>Memasukkan Data Studi dalam Data Frame</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb10-1" tabindex="-1"></a>data_md <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="at">study =</span> <span class="fu">c</span>(<span class="st">&quot;Studi 1&quot;</span>, <span class="st">&quot;Studi 2&quot;</span>, <span class="st">&quot;Studi 3&quot;</span>), <span class="at">mean_treat =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">78</span>, <span class="dv">90</span>), <span class="at">sd_treat =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">15</span>), <span class="at">n_treat =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">60</span>), <span class="at">mean_control =</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">75</span>, <span class="dv">85</span>), <span class="at">sd_control =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">14</span>), <span class="at">n_control =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">60</span>))</span></code></pre></div></li>
+<li><p>Analisis Meta untuk Standardized Mean Difference (SMD)</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb11-1" tabindex="-1"></a>smd_meta <span class="ot">&lt;-</span> <span class="fu">metacont</span>( <span class="at">n.e =</span> data_md<span class="sc">$</span>n_treat, <span class="at">mean.e =</span> data_md<span class="sc">$</span>mean_treat, <span class="at">sd.e =</span> data_md<span class="sc">$</span>sd_treat, <span class="at">n.c =</span> data_md<span class="sc">$</span>n_control, <span class="at">mean.c =</span> data_md<span class="sc">$</span>mean_control, <span class="at">sd.c =</span> data_md<span class="sc">$</span>sd_control, <span class="at">studlab =</span> data_md<span class="sc">$</span>study, <span class="at">sm =</span> <span class="st">&quot;SMD&quot;</span>, <span class="at">method.smd =</span> <span class="st">&quot;Hedges&quot;</span> )</span></code></pre></div></li>
+<li><p>Menampilkan Hasil SMD</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb12-1" tabindex="-1"></a><span class="fu">summary</span>(smd_meta)</span></code></pre></div></li>
+</ol>
+<pre><code>           SMD            95%-CI %W(common) %W(random)
+        Studi 1 0.4492 [ 0.0521; 0.8463]       33.1       33.1
+        Studi 2 0.3489 [-0.0928; 0.7907]       26.7       26.7
+        Studi 3 0.3424 [-0.0181; 0.7030]       40.2       40.2
+
+    Number of studies: k = 3
+    Number of observations: o = 300 (o.e = 150, o.c = 150)
+
+
+                             SMD           95%-CI    z p-value
+    Common effect model  0.3795 [0.1511; 0.6080] 3.26  0.0011
+    Random effects model 0.3795 [0.1511; 0.6080] 3.26  0.0011
+
+
+    Quantifying heterogeneity (with 95%-CIs):
+    tau^2 = 0 [0.0000; 0.1007]; tau = 0 [0.0000; 0.3174]
+    I^2 = 0.0% [0.0%; 89.6%]; H = 1.00 [1.00; 3.10]
+
+
+    Test of heterogeneity:
+        Q d.f. p-value
+     0.18    2  0.9151</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Visualisasi Forest Plot</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cb14-1" tabindex="-1"></a><span class="fu">forest</span>(smd_meta, <span class="at">col.diamond =</span> <span class="st">&quot;red&quot;</span>, <span class="at">col.square =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<p><img src="images/Screenshot%202025-06-11%20120325.png" /></p></li>
+</ol>
+<p><strong>Referensi</strong></p>
+<p>Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P.
+T. Higgins and H. R. Rothstein© 2009 John Wiley &amp; Sons, Ltd. ISBN:
+978-0-470-05724-7</p>
+<p>Lin L, Aloe AM. Evaluation of various estimators for standardized mean
+difference in meta-analysis. Stat Med. 2021 Jan 30;40(2):403–26.
+<a href="doi:10.1002/sim.8781" class="uri">doi:10.1002/sim.8781</a>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="types-of-meta-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a-caucus-race-and-a-long-tale.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/rteam-2425/rhandbook/edit/main/05.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": "https://github.com/rteam-2425/rhandbook/blob/main/05.Rmd",
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

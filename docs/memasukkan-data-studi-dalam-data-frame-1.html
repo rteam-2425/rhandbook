@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A caucus-race and a long tale | R-Handbook</title>
-  <meta name="description" content="A caucus-race and a long tale | R-Handbook" />
+  <title>Memasukkan Data Studi dalam Data Frame | R-Handbook</title>
+  <meta name="description" content="Memasukkan Data Studi dalam Data Frame | R-Handbook" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A caucus-race and a long tale | R-Handbook" />
+  <meta property="og:title" content="Memasukkan Data Studi dalam Data Frame | R-Handbook" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A caucus-race and a long tale | R-Handbook" />
+  <meta name="twitter:title" content="Memasukkan Data Studi dalam Data Frame | R-Handbook" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="a-caucus-race-and-a-long-tale-1.html"/>
-<link rel="next" href="a-caucus-race-and-a-long-tale-3.html"/>
+<link rel="prev" href="load-paket-meta-1.html"/>
+<link rel="next" href="analisis-meta-untuk-standardized-mean-difference-smd.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -54,70 +54,6 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -190,8 +126,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#cohens-d"><i class="fa fa-check"></i>Cohen’s d</a></li>
 <li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#hedges-g"><i class="fa fa-check"></i>Hedges’ g</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"><a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html#tutorial-r"><i class="fa fa-check"></i>Tutorial R</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="load-paket-meta.html"><a href="load-paket-meta.html"><i class="fa fa-check"></i>Load paket meta</a></li>
+<li class="chapter" data-level="" data-path="memasukkan-data-studi-dalam-data-frame.html"><a href="memasukkan-data-studi-dalam-data-frame.html"><i class="fa fa-check"></i>Memasukkan Data Studi dalam Data Frame</a></li>
+<li class="chapter" data-level="" data-path="analisis-meta-untuk-mean-difference-md.html"><a href="analisis-meta-untuk-mean-difference-md.html"><i class="fa fa-check"></i>Analisis Meta untuk Mean Difference (MD)</a></li>
+<li class="chapter" data-level="" data-path="menampilkan-hasil-md.html"><a href="menampilkan-hasil-md.html"><i class="fa fa-check"></i>Menampilkan Hasil MD</a></li>
+<li class="chapter" data-level="" data-path="visualisasi-forest-plot.html"><a href="visualisasi-forest-plot.html"><i class="fa fa-check"></i>Visualisasi Forest Plot</a></li>
+<li class="chapter" data-level="" data-path="load-paket-meta-1.html"><a href="load-paket-meta-1.html"><i class="fa fa-check"></i>Load paket meta</a></li>
+<li class="chapter" data-level="" data-path="memasukkan-data-studi-dalam-data-frame-1.html"><a href="memasukkan-data-studi-dalam-data-frame-1.html"><i class="fa fa-check"></i>Memasukkan Data Studi dalam Data Frame</a></li>
+<li class="chapter" data-level="" data-path="analisis-meta-untuk-standardized-mean-difference-smd.html"><a href="analisis-meta-untuk-standardized-mean-difference-smd.html"><i class="fa fa-check"></i>Analisis Meta untuk Standardized Mean Difference (SMD)</a></li>
+<li class="chapter" data-level="" data-path="menampilkan-hasil-smd.html"><a href="menampilkan-hasil-smd.html"><i class="fa fa-check"></i>Menampilkan Hasil SMD</a></li>
+<li class="chapter" data-level="" data-path="visualisasi-forest-plot-1.html"><a href="visualisasi-forest-plot-1.html"><i class="fa fa-check"></i>Visualisasi Forest Plot</a></li>
 <li class="chapter" data-level="" data-path="a-caucus-race-and-a-long-tale.html"><a href="a-caucus-race-and-a-long-tale.html"><i class="fa fa-check"></i>A caucus-race and a long tale</a></li>
 <li class="chapter" data-level="" data-path="a-caucus-race-and-a-long-tale-1.html"><a href="a-caucus-race-and-a-long-tale-1.html"><i class="fa fa-check"></i>A caucus-race and a long tale</a></li>
 <li class="chapter" data-level="" data-path="a-caucus-race-and-a-long-tale-2.html"><a href="a-caucus-race-and-a-long-tale-2.html"><i class="fa fa-check"></i>A caucus-race and a long tale</a></li>
@@ -217,17 +162,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="a-caucus-race-and-a-long-tale-2" class="section level1 hasAnchor">
-<h1>A caucus-race and a long tale<a href="a-caucus-race-and-a-long-tale-2.html#a-caucus-race-and-a-long-tale-2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-
+<div id="memasukkan-data-studi-dalam-data-frame-1" class="section level1 hasAnchor">
+<h1>Memasukkan Data Studi dalam Data Frame<a href="memasukkan-data-studi-dalam-data-frame-1.html#memasukkan-data-studi-dalam-data-frame-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>data_md &lt;- data.frame( study = c(“Studi 1”, “Studi 2”, “Studi 3”),
+mean_treat = c(85, 78, 90), # Mean kelompok perlakuan sd_treat = c(10,
+8, 15), # Standar deviasi kelompok perlakuan n_treat = c(50, 40, 60),
+# Jumlah sampel kelompok perlakuan mean_control = c(80, 75, 85), #
+Mean kelompok kontrol sd_control = c(12, 9, 14), # Standar deviasi
+kelompok kontrol n_control = c(50, 40, 60) # Jumlah sampel kelompok
+kontrol )</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="a-caucus-race-and-a-long-tale-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="a-caucus-race-and-a-long-tale-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="load-paket-meta-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="analisis-meta-untuk-standardized-mean-difference-smd.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -258,7 +209,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rteam-2425/rhandbook/edit/main/08.Rmd",
+    "link": "https://github.com/rteam-2425/rhandbook/edit/main/05.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -266,7 +217,7 @@ gitbook.start({
     "text": null
   },
   "view": {
-    "link": "https://github.com/rteam-2425/rhandbook/blob/main/08.Rmd",
+    "link": "https://github.com/rteam-2425/rhandbook/blob/main/05.Rmd",
     "text": null
   },
   "download": null,
@@ -281,6 +232,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

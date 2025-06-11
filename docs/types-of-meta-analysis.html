@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A caucus-race and a long tale | R-Handbook</title>
-  <meta name="description" content="A caucus-race and a long tale | R-Handbook" />
+  <title>Types of Meta-Analysis | R-Handbook</title>
+  <meta name="description" content="Types of Meta-Analysis | R-Handbook" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A caucus-race and a long tale | R-Handbook" />
+  <meta property="og:title" content="Types of Meta-Analysis | R-Handbook" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A caucus-race and a long tale | R-Handbook" />
+  <meta name="twitter:title" content="Types of Meta-Analysis | R-Handbook" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="a-caucus-race-and-a-long-tale-1.html"/>
-<link rel="next" href="a-caucus-race-and-a-long-tale-3.html"/>
+<link rel="prev" href="types-of-secondary-research.html"/>
+<link rel="next" href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -217,17 +217,154 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="a-caucus-race-and-a-long-tale-2" class="section level1 hasAnchor">
-<h1>A caucus-race and a long tale<a href="a-caucus-race-and-a-long-tale-2.html#a-caucus-race-and-a-long-tale-2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="types-of-meta-analysis" class="section level1 hasAnchor">
+<h1>Types of Meta-Analysis<a href="types-of-meta-analysis.html#types-of-meta-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Meta-analisis adalah metode statistik yang menggabungkan hasil dari dua
+atau lebih studi independen yang membahas pertanyaan penelitian yang
+sama. Tujuan utama meta-analisis adalah mengintegrasikan hasil
+kuantitatif dari berbagai penelitian sebelumnya untuk menghasilkan satu
+perkiraan numerik yang merangkum seluruh temuan individual.
+Meta-analisis digunakan untuk mengukur berbagai hal, seperti efektivitas
+suatu obat, prevalensi suatu penyakit, atau hubungan antara dua variabel
+dalam berbagai penelitian. Karena bersifat kuantitatif, meta-analisis
+hanya dapat dilakukan pada penelitian yang melaporkan hasil dalam bentuk
+numerik. Dibandingkan dengan tinjauan sistematis, meta-analisis sering
+kali lebih eksklusif dalam memilih bukti yang akan dirangkum. Agar dapat
+dilakukan secara valid, penelitian yang dimasukkan dalam meta-analisis
+biasanya harus memiliki desain yang serupa, menggunakan metode
+pengukuran yang sama, dan/atau menerapkan intervensi yang sebanding.</p>
+<div id="typical-meta-analysis" class="section level2 hasAnchor">
+<h2>Typical Meta-Analysis<a href="types-of-meta-analysis.html#typical-meta-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Typical Meta-Analysis/Pairwise Meta-analysis/Meta-analisis tradisional
+merupakan jenis meta-analisis yang paling umum digunakan. Metode ini
+membandingkan dua intervensi secara langsung berdasarkan studi yang
+tersedia. Misalnya, membandingkan efektivitas obat A dengan plasebo
+dalam mengurangi gejala tertentu. Ukuran efek yang sering digunakan
+meliputi mean difference (perbedaan rata-rata) atau risk ratio (rasio
+risiko). Contoh kasus dari meta-analisis ini yaitu saat menilai
+efektivitas obat golongan antidepresan dibandingkan dengan plasebo dalam
+mengurangi gejala depresi. Studi-studi yang dianalisis melaporkan skor
+rata-rata gejala depresi pada kelompok yang menerima antidepresan dan
+kelompok yang menerima plasebo. Perbedaan rata-rata antara kedua
+kelompok ini dihitung untuk menentukan seberapa efektif antidepresan
+tersebut.</p>
+<p>Effect size dalam typical meta-analysis dapat diukur menggunakan
+beberapa parameter statistik, tergantung pada jenis data yang
+dianalisis. Beberapa ukuran efek (effect size) yang umum digunakan
+meliputi:</p>
+<ol style="list-style-type: decimal">
+<li><p>Mean Difference (MD): Digunakan untuk data kontinu, di mana hasil
+diukur dengan skala yang sama dalam semua studi.</p></li>
+<li><p>Standardized Mean Difference (SMD): Digunakan ketika skala
+pengukuran berbeda di antara studi-studi yang dianalisis.</p></li>
+<li><p>Risk Ratio (RR): Digunakan dalam studi yang membandingkan kejadian
+suatu peristiwa antara dua kelompok.</p></li>
+<li><p>Odds Ratio (OR): Digunakan dalam studi kasus-kontrol untuk
+membandingkan kemungkinan terjadinya suatu peristiwa antara dua
+kelompok.</p></li>
+<li><p>Hazard Ratio (HR): Digunakan dalam studi yang melibatkan waktu
+hingga kejadian tertentu (time-to-event analysis), seperti studi
+kohort yang menganalisis waktu bertahan hidup pasien setelah
+menerima pengobatan tertentu.</p></li>
+</ol>
+</div>
+<div id="diagnostic-meta-analysis" class="section level2 hasAnchor">
+<h2>Diagnostic Meta-Analysis<a href="types-of-meta-analysis.html#diagnostic-meta-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Meta-analisis diagnostik adalah jenis meta-analisis yang digunakan untuk
+mengevaluasi akurasi suatu tes diagnostik dengan menggabungkan hasil
+dari beberapa studi yang menilai performa tes tersebut. Contoh kasus
+dari meta-analisis ini adalah mengevaluasi akurasi tes rapid antigen
+untuk diagnosis COVID-19. Studi-studi yang dianalisis melaporkan
+sensitivitas (kemampuan tes mendeteksi kasus positif) dan spesifisitas
+(kemampuan tes mengidentifikasi kasus negatif) dari tes tersebut. Data
+ini kemudian digabungkan untuk menghasilkan kurva SROC dan menghitung
+AUC, yang memberikan gambaran keseluruhan tentang kinerja diagnostik tes
+tersebut.</p>
+<p>Dalam meta-analisis diagnostik, ukuran efek (effect size) yang umum
+digunakan meliputi:</p>
+<ol style="list-style-type: decimal">
+<li><p>Sensitivitas dan Spesifisitas</p>
+<p>Sensitivitas mengukur kemampuan tes dalam mendeteksi pasien yang
+benar-benar memiliki penyakit (true positive rate). Spesifisitas
+mengukur kemampuan tes dalam mengidentifikasi individu yang tidak
+memiliki penyakit (true negative rate).</p></li>
+<li><p>Positive Predictive Value (PPV) dan Negative Predictive Value (NPV)</p>
+<p>PPV menunjukkan kemungkinan bahwa seseorang benar-benar memiliki
+penyakit jika hasil tesnya positif. NPV menunjukkan kemungkinan
+bahwa seseorang benar-benar tidak memiliki penyakit jika hasil
+tesnya negatif.</p></li>
+<li><p>Diagnostic Odds Ratio (DOR)</p>
+<p>DOR adalah ukuran efek yang menggabungkan sensitivitas dan
+spesifisitas menjadi satu nilai tunggal. Nilai DOR yang lebih tinggi
+menunjukkan bahwa tes memiliki akurasi diagnostik yang lebih baik.</p></li>
+<li><p>Summary Receiver Operating Characteristic (SROC) Curve &amp; Area Under
+the Curve (AUC)</p>
+<p>SROC curve adalah grafik yang menggambarkan hubungan antara
+sensitivitas dan spesifisitas di berbagai studi. AUC menunjukkan
+seberapa baik tes dapat membedakan antara pasien dengan dan tanpa
+penyakit (nilai 1 menunjukkan akurasi sempurna).</p></li>
+</ol>
+</div>
+<div id="network-meta-analysis" class="section level2 hasAnchor">
+<h2>Network Meta-Analysis<a href="types-of-meta-analysis.html#network-meta-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Network meta-analysis (NMA), atau meta-analisis jaringan, adalah metode
+statistik yang memungkinkan perbandingan tidak hanya antara dua
+intervensi secara langsung (pairwise comparison), tetapi juga antara
+tiga atau lebih intervensi, termasuk yang belum pernah dibandingkan
+langsung dalam suatu studi klinis. Teknik ini memungkinkan analisis yang
+lebih luas terhadap berbagai pilihan pengobatan atau intervensi dalam
+suatu kondisi. Sebuah meta-analisis jaringan yang membandingkan berbagai
+obat antihipertensi (misalnya, obat A, B, dan C) dalam menurunkan
+tekanan darah pada pasien dengan hipertensi. Meskipun tidak semua obat
+telah dibandingkan langsung dalam studi klinis, analisis jaringan
+memungkinkan estimasi efektivitas relatif antara semua obat tersebut
+dengan menggabungkan data dari berbagai studi yang tersedia.</p>
+<p>Berikut ukuran efek yang umum digunakan dalam NMA meliputi:</p>
+<ol style="list-style-type: decimal">
+<li><p>Odds Ratio (OR)</p>
+<p>Digunakan untuk mengukur peluang terjadinya suatu peristiwa pada
+kelompok intervensi dibandingkan dengan kelompok kontrol. Contoh:
+Network meta-analysis membandingkan berbagai obat antihipertensi
+(misalnya, ACE inhibitor, beta-blocker, dan diuretik) dalam mencegah
+stroke. Studi yang ada mungkin tidak langsung membandingkan semua
+obat tersebut, tetapi melalui perbandingan tidak langsung dengan
+plasebo, efektivitas relatifnya bisa diperkirakan.</p></li>
+<li><p>Risk Ratio (RR)</p>
+<p>Mengukur risiko relatif terjadinya suatu peristiwa dalam kelompok
+intervensi dibandingkan dengan kelompok kontrol. Contoh:
+Meta-analisis jaringan yang membandingkan efektivitas berbagai jenis
+vaksin COVID-19 dalam mencegah infeksi simptomatik.</p></li>
+<li><p>Hazard Ratio (HR)</p>
+<p>Digunakan dalam analisis time-to-event (misalnya, kelangsungan hidup
+pasien). Contoh: NMA yang membandingkan berbagai terapi kanker
+(kemoterapi, terapi target, dan imunoterapi) berdasarkan tingkat
+kelangsungan hidup pasien setelah 5 tahun.</p></li>
+<li><p>Surface Under the Cumulative Ranking Curve (SUCRA)</p>
+<p>SUCRA digunakan dalam NMA untuk menentukan peringkat intervensi
+berdasarkan efektivitasnya. Nilai SUCRA berkisar antara 0 hingga 1,
+dengan nilai yang lebih tinggi menunjukkan intervensi yang lebih
+efektif. Contoh: Dalam meta-analisis jaringan tentang pengobatan
+migrain, berbagai obat (misalnya, triptan, NSAID, dan obat baru
+seperti gepants) dapat diberi peringkat menggunakan SUCRA untuk
+menentukan mana yang paling efektif dalam mengurangi frekuensi
+serangan migrain.</p></li>
+</ol>
+<p><strong>Referensi</strong></p>
+<p>Doing Meta-Analysis with R, DOI: 10.1201/9781003107347 Chapter 10:
+Analysing data and undertaking meta-analyses,
+<a href="https://training.cochrane.org/handbook/current/chapter-10?utm_source=chatgpt.com" class="uri">https://training.cochrane.org/handbook/current/chapter-10?utm_source=chatgpt.com</a></p>
+<p>Cochrane Handbook, Chapter 11: Undertaking Network Meta-Analyses,
+<a href="https://training.cochrane.org/handbook/current/chapter-11" class="uri">https://training.cochrane.org/handbook/current/chapter-11</a></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="a-caucus-race-and-a-long-tale-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="a-caucus-race-and-a-long-tale-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="types-of-secondary-research.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="meta-analisis-mean-difference-md-dan-standardized-mean-difference-smd.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -258,7 +395,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rteam-2425/rhandbook/edit/main/08.Rmd",
+    "link": "https://github.com/rteam-2425/rhandbook/edit/main/04.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -266,7 +403,7 @@ gitbook.start({
     "text": null
   },
   "view": {
-    "link": "https://github.com/rteam-2425/rhandbook/blob/main/08.Rmd",
+    "link": "https://github.com/rteam-2425/rhandbook/blob/main/04.Rmd",
     "text": null
   },
   "download": null,
