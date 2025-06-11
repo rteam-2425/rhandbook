@@ -95,8 +95,8 @@ korelasi dan jumlah sampel.
 
 Data yang dibutuhkan bisa dimasukkan ke dalam excel. Data memuat nama
 studi, koefisien korelasi, dan jumlah sampel. Data dummy dapat diakses
-pada
-<https://docs.google.com/spreadsheets/d/1Gocpaa3V-bUGZ5fBcBjGQFifCQO8JyUQ/edit?usp=sharing&ouid=104571729736483527245&rtpof=true&sd=true>
+pada [Dummy
+Table](https://docs.google.com/spreadsheets/d/1Gocpaa3V-bUGZ5fBcBjGQFifCQO8JyUQ/edit?usp=sharing&ouid=104571729736483527245&rtpof=true&sd=true)
 
 Setelah mengunduh data dummy, buka RStudio klik pilihan “Import Dataset”
 pada menu “Environment”. Kemudian, klik “From Excel”. Kemudian, klik

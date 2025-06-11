@@ -83,9 +83,8 @@ langkah-langkah berikut:
 
 ## Tutorial R
 
-Link Dummy Table:
-<https://docs.google.com/spreadsheets/d/1OUq7JFGv9IXvLZIKJfVMjNjLvXAKkSYy/edit>?
-usp=sharing&ouid=104571729736483527245&rtpof=true&sd=true
+Link Dummy Table: [Dummy
+Table](https://docs.google.com/spreadsheets/d/1OUq7JFGv9IXvLZIKJfVMjNjLvXAKkSYy/edit?usp=sharing&ouid=116098126709338312126&rtpof=true&sd=true){.uri}
 
 **Tutorial Mean Difference di R**
 
