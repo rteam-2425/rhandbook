@@ -91,31 +91,31 @@ usp=sharing&ouid=104571729736483527245&rtpof=true&sd=true
 
 1.  Install paket meta (jalankan hanya sekali)
 
-    ``` R
+    ``` r
     install.packages("meta")
     ```
 
 2.  Load paket meta
 
-    ``` R
+    ``` r
     library(meta)
     ```
 
 3.  Memasukkan Data Studi dalam Data Frame
 
-    ``` R
+    ``` r
     data_md <- data.frame( study = c("Studi 1", "Studi 2", "Studi 3"), mean_treat = c(85, 78, 90), sd_treat = c(10, 8, 15), n_treat = c(50, 40, 60), mean_control = c(80, 75, 85), sd_control = c(12, 9, 14), n_control = c(50, 40, 60))
     ```
 
 4.  Analisis Meta untuk Mean Difference (MD)
 
-    ``` R
+    ``` r
     md_meta <- metacont( n.e = data_md$n_treat, mean.e = data_md$mean_treat, sd.e = data_md$sd_treat, n.c = data_md$n_control, mean.c = data_md$mean_control, sd.c = data_md$sd_control, studlab = data_md$study, sm = "MD", )
     ```
 
 5.  Menampilkan Hasil MD
 
-    ``` R
+    ``` r
     summary(md_meta)
     ```
 
@@ -147,7 +147,7 @@ usp=sharing&ouid=104571729736483527245&rtpof=true&sd=true
 
 6.  Visualisasi Forest Plot
 
-    ``` R
+    ``` r
     forest(md_meta, col.diamond = "blue", col.square = "black")
     ```
 
@@ -157,31 +157,31 @@ usp=sharing&ouid=104571729736483527245&rtpof=true&sd=true
 
 1.  Install paket meta (jalankan hanya sekali)
 
-    ``` R
+    ``` r
     install.packages("meta")
     ```
 
 2.  Load paket meta
 
-    ``` R
+    ``` r
     library(meta)
     ```
 
 3.  Memasukkan Data Studi dalam Data Frame
 
-    ``` R
+    ``` r
     data_md <- data.frame( study = c("Studi 1", "Studi 2", "Studi 3"), mean_treat = c(85, 78, 90), sd_treat = c(10, 8, 15), n_treat = c(50, 40, 60), mean_control = c(80, 75, 85), sd_control = c(12, 9, 14), n_control = c(50, 40, 60))
     ```
 
 4.  Analisis Meta untuk Standardized Mean Difference (SMD)
 
-    ``` R
+    ``` r
     smd_meta <- metacont( n.e = data_md$n_treat, mean.e = data_md$mean_treat, sd.e = data_md$sd_treat, n.c = data_md$n_control, mean.c = data_md$mean_control, sd.c = data_md$sd_control, studlab = data_md$study, sm = "SMD", method.smd = "Hedges" )
     ```
 
 5.  Menampilkan Hasil SMD
 
-    ``` R
+    ``` r
     summary(smd_meta)
     ```
 
@@ -212,7 +212,7 @@ usp=sharing&ouid=104571729736483527245&rtpof=true&sd=true
 
 6.  Visualisasi Forest Plot
 
-    ``` R
+    ``` r
     forest(smd_meta, col.diamond = "red", col.square = "black")
     ```
 
