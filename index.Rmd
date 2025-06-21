@@ -49,7 +49,7 @@ Viva AMSA!
 +:--------------------------------------------------------------:+:-----------------------------------------:+:------------------------------------------------------------:+
 | <img src="images/robby.png" class="centered-img" width="134"/> | ![](images/Joy%20(1)-01.png){width="134"} | <img src="images/nat.png" class="centered-img" width="134"/> |
 |                                                                |                                           |                                                              |
-| **Robby Malik Chandra S.**                                     | **Joyceline Chika Tanely**                | **Maria Sri Crishnatalia W.**                                |
+| **Robby Malik Chandra S.**                                     | **Joyceline Chika T.**                    | **Maria Sri Crishnatalia W.**                                |
 |                                                                |                                           |                                                              |
 | *Research Team District* 2                                     | *Research Team District* 2                | *Research Team District* 3                                   |
 +----------------------------------------------------------------+-------------------------------------------+--------------------------------------------------------------+
