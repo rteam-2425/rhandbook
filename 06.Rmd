@@ -94,24 +94,24 @@ korelasi dan jumlah sampel.
 ### Data
 
 Data yang dibutuhkan bisa dimasukkan ke dalam excel. Data memuat nama
-studi, koefisien korelasi, dan jumlah sampel. Data dummy dapat diakses
+studi, koefisien korelasi, dan jumlah sampel. Data *dummy* dapat diakses
 pada [Dummy
 Table](https://docs.google.com/spreadsheets/d/1Gocpaa3V-bUGZ5fBcBjGQFifCQO8JyUQ/edit?usp=sharing&ouid=104571729736483527245&rtpof=true&sd=true)
 
-Setelah mengunduh data dummy, buka RStudio klik pilihan “Import Dataset”
-pada menu “Environment”. Kemudian, klik “From Excel”. Kemudian, klik
-“Browse” pada ujung kanan atas. Setelah itu, pilih file yang diinginkan.
-Lalu, klik “Import”
+Setelah mengunduh data *dummy*, buka RStudio klik pilihan “*Import
+Dataset*” pada menu “*Environment*”. Kemudian, klik “*From Excel*”.
+Kemudian, klik “*Browse*” pada ujung kanan atas. Setelah itu, pilih
+*file* yang diinginkan. Lalu, klik “*Import*”
 
 ### Meta-Analisis
 
-1.  Install package terlebih dahulu
+1.  *Install package* terlebih dahulu
 
     ``` r
     install.packages(c(“dmetar”, “tidyverse”, “meta”))
     ```
 
-2.  Pemanggilan package
+2.  Pemanggilan *package*
 
     ``` r
     library(dmetar)
@@ -158,7 +158,7 @@ Details on meta-analytical method:
 - Fisher's z transformation of correlations
 ```
 
-5.  Membuat forest plot
+5.  Membuat *forest plot*
 
     ``` r
     forest(m.cor)

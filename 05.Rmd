@@ -7,39 +7,40 @@ editor_options:
 # Meta-Analisis Kontinu
 
 Pada setiap studi yang melibatkan nilai rata-rata dan standar deviasi,
-effect sizes yang diinginkan adalah (raw) mean difference dan
-standardized mean difference. Di bagian ini, akan terdapat penjelasan
-lebih lanjut mengenai mean difference dan standardized mean difference.
+*effect sizes* yang diinginkan adalah (*raw)* *mean difference* dan
+*standardized mean difference*. Di bagian ini, akan terdapat penjelasan
+lebih lanjut mengenai *mean difference* dan *standardized mean
+difference*.
 
-## Mean Difference
+## *Mean Difference*
 
 ### Definisi
 
 Ketika hasil penelitian dilaporkan dalam skala yang lazim digunakan dan
 dalam skala yang sama untuk setiap studi, meta analisis dapat dilakukan
-secara langsung pada mean difference atau yang lebih awam disebut raw
-mean difference. Keuntungan yang paling signifikan untuk metode ini
+secara langsung pada mean difference atau yang lebih awam disebut *raw
+mean difference.* Keuntungan yang paling signifikan untuk metode ini
 adalah karena menggunakan skala yang berarti, hasil yang dihasilkan
 metode ini lebih mudah untuk disebarluaskan dan digunakan untuk pengguna
 yang lebih luas.
 
-## Standardized Mean Difference
+## *Standardized Mean Difference*
 
 ### Definisi
 
-Jika pengukuran yang digunakan tidak terlalu lazim, penggunaan raw mean
-difference tidak terlalu direkomendasikan. Metode yang direkomendasikan
-merupakan standardized mean difference, dimana metode ini bisa digunakan
-untuk memfasilitasi studi-studi dengan instrumen penelitian yang berbeda
-untuk melihat hasil akhir (outcome) yang diinginkan. Dari studi-studi
-ini, dapat diambil standar deviasinya untuk membuat index yang dapat
-digunakan sebagai acuan perbandingan. Dua estimator SMD yang paling umum
-digunakan adalah Cohen’s d dan Hedges’ g.
+Jika pengukuran yang digunakan tidak terlalu lazim, penggunaan *raw mean
+difference* tidak terlalu direkomendasikan. Metode yang direkomendasikan
+merupakan *standardized mean difference*, dimana metode ini bisa
+digunakan untuk memfasilitasi studi-studi dengan instrumen penelitian
+yang berbeda untuk melihat hasil akhir (*outcome*) yang diinginkan. Dari
+studi-studi ini, dapat diambil standar deviasinya untuk membuat *index*
+yang dapat digunakan sebagai acuan perbandingan. Dua estimator SMD yang
+paling umum digunakan adalah Cohen’s d dan Hedges’ g.
 
 ### Cohen’s d
 
 Cohen's d dihitung sebagai selisih antara rata-rata dua kelompok yang
-dibagi dengan standar deviasi gabungan (pooled standard deviation).
+dibagi dengan standar deviasi gabungan (*pooled standard deviation*).
 Secara matematis, Cohen's d direpresentasikan sebagai:
 
 ::: {style="text-align: center;"}
@@ -52,7 +53,7 @@ dapat mengalami bias, terutama ketika ukuran sampel kecil.
 
 ### Hedges’ g
 
-Hedges' g adalah versi bias-corrected dari Cohen's d. Metode ini
+Hedges' g adalah versi *bias-corrected* dari Cohen's d. Metode ini
 menyesuaikan Cohen's d dengan faktor koreksi untuk mengatasi bias akibat
 ukuran sampel yang kecil. Hedges' g dihitung sebagai:
 
@@ -66,47 +67,53 @@ terstandarisasi, terutama saat menangani sampel berukuran kecil.
 
 #### Perhitungan SMD
 
-Untuk menghitung Standardized Mean Difference (SMD), ikuti
+Untuk menghitung *Standardized Mean Difference* (SMD), ikuti
 langkah-langkah berikut:
 
-1.  Kumpulkan Data Ambil data rata-rata (mean), standar deviasi
-    (standard deviation), dan ukuran sampel dari setiap penelitian yang
+1.  Kumpulkan Data
+
+    Ambil data rata-rata (*mean*), standar deviasi (*standard
+    deviation*), dan ukuran sampel dari setiap penelitian yang
     digunakan.
 
-2.  Hitung Cohen's d atau Hedges' g. Untuk Cohen's d, standar deviasi
-    gabungan (pooled standard deviation) dihitung dengan rumus berikut:
+2.  Hitung Cohen's d atau Hedges' g.
+
+    Untuk Cohen's d, standar deviasi gabungan (*pooled standard
+    deviation*) dihitung dengan rumus berikut:
 
     ![](images/Screenshot%202025-06-11%20114907.png){width="275"}
 
-3.  Lakukan Perhitungan untuk Setiap Studi Ulangi langkah perhitungan
-    ini untuk setiap studi yang disertakan dalam meta-analysis.
+3.  Lakukan Perhitungan untuk Setiap Studi
+
+    Ulangi langkah perhitungan ini untuk setiap studi yang disertakan
+    dalam meta-analisis.
 
 ## Tutorial R
 
 Link Dummy Table: [Dummy
 Table](https://docs.google.com/spreadsheets/d/1OUq7JFGv9IXvLZIKJfVMjNjLvXAKkSYy/edit?usp=sharing&ouid=116098126709338312126&rtpof=true&sd=true){.uri}
 
-**Tutorial Mean Difference di R**
+**Tutorial Meta-Analisis *Mean Difference* di R**
 
-1.  Install paket meta (jalankan hanya sekali)
+1.  *Install* paket meta (jalankan hanya sekali)
 
     ``` r
     install.packages("meta")
     ```
 
-2.  Load paket meta
+2.  *Load* paket meta
 
     ``` r
     library(meta)
     ```
 
-3.  Memasukkan Data Studi dalam Data Frame
+3.  Memasukkan Data Studi dalam *Data Frame*
 
     ``` r
     data_md <- data.frame( study = c("Studi 1", "Studi 2", "Studi 3"), mean_treat = c(85, 78, 90), sd_treat = c(10, 8, 15), n_treat = c(50, 40, 60), mean_control = c(80, 75, 85), sd_control = c(12, 9, 14), n_control = c(50, 40, 60))
     ```
 
-4.  Analisis Meta untuk Mean Difference (MD)
+4.  Analisis Meta untuk *Mean Difference* (MD)
 
     ``` r
     md_meta <- metacont( n.e = data_md$n_treat, mean.e = data_md$mean_treat, sd.e = data_md$sd_treat, n.c = data_md$n_control, mean.c = data_md$mean_control, sd.c = data_md$sd_control, studlab = data_md$study, sm = "MD", )
@@ -144,7 +151,7 @@ Table](https://docs.google.com/spreadsheets/d/1OUq7JFGv9IXvLZIKJfVMjNjLvXAKkSYy/
     0.62    2  0.7353
 ```
 
-6.  Visualisasi Forest Plot
+6.  Visualisasi *Forest Plot*
 
     ``` r
     forest(md_meta, col.diamond = "blue", col.square = "black")
@@ -152,27 +159,27 @@ Table](https://docs.google.com/spreadsheets/d/1OUq7JFGv9IXvLZIKJfVMjNjLvXAKkSYy/
 
     ![](images/Screenshot%202025-06-11%20120335.png)
 
-**Tutorial Standardized Mean Difference di R**
+**Tutorial Meta-Analisis *Standardized Mean Difference* di R**
 
-1.  Install paket meta (jalankan hanya sekali)
+1.  *Install* paket meta (jalankan hanya sekali)
 
     ``` r
     install.packages("meta")
     ```
 
-2.  Load paket meta
+2.  *Load* paket meta
 
     ``` r
     library(meta)
     ```
 
-3.  Memasukkan Data Studi dalam Data Frame
+3.  Memasukkan Data Studi dalam *Data Frame*
 
     ``` r
     data_md <- data.frame( study = c("Studi 1", "Studi 2", "Studi 3"), mean_treat = c(85, 78, 90), sd_treat = c(10, 8, 15), n_treat = c(50, 40, 60), mean_control = c(80, 75, 85), sd_control = c(12, 9, 14), n_control = c(50, 40, 60))
     ```
 
-4.  Analisis Meta untuk Standardized Mean Difference (SMD)
+4.  Analisis Meta untuk *Standardized Mean Difference* (SMD)
 
     ``` r
     smd_meta <- metacont( n.e = data_md$n_treat, mean.e = data_md$mean_treat, sd.e = data_md$sd_treat, n.c = data_md$n_control, mean.c = data_md$mean_control, sd.c = data_md$sd_control, studlab = data_md$study, sm = "SMD", method.smd = "Hedges" )
@@ -209,7 +216,7 @@ Table](https://docs.google.com/spreadsheets/d/1OUq7JFGv9IXvLZIKJfVMjNjLvXAKkSYy/
      0.18    2  0.9151
 ```
 
-6.  Visualisasi Forest Plot
+6.  Visualisasi *Forest Plot*
 
     ``` r
     forest(smd_meta, col.diamond = "red", col.square = "black")

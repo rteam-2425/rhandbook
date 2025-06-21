@@ -1,8 +1,8 @@
 # Riset Primer
 
-Penelitian primer adalah metode pengumpulan data langsung dari sumber asli, bukan melalui studi literatur atau data sekunder. Penelitian primer dibedakan menjadi simple primary research dan multiple primary research tergantung pada jumlah variabel yang digunakan.
+Penelitian primer adalah metode pengumpulan data langsung dari sumber asli, bukan melalui studi literatur atau data sekunder. Penelitian primer dibedakan menjadi *simple primary research* dan *multiple primary research* tergantung pada jumlah variabel yang digunakan.
 
-Dalam analisis data penelitian, regresi adalah teknik statistik yang digunakan untuk memahami hubungan antara variabel dependen dan independen. Regresi dapat diklasifikasikan menjadi univariate regression, di mana hanya ada satu variabel independen dan multivariate regression, di mana lebih dari satu variabel independen digunakan untuk memprediksi variabel dependen.
+Dalam analisis data penelitian, regresi adalah teknik statistik yang digunakan untuk memahami hubungan antara variabel dependen dan independen. Regresi dapat diklasifikasikan menjadi univariat, di mana hanya ada satu variabel independen dan multivariat, di mana lebih dari satu variabel independen digunakan untuk memprediksi variabel dependen.
 
 ## Simpel vs Multipel
 
@@ -10,13 +10,13 @@ Dalam analisis data penelitian, regresi adalah teknik statistik yang digunakan u
 
 Riset primer simpel adalah jenis penelitian yang hanya melibatkan satu variabel independen dan satu variabel dependen. Penelitian ini sering digunakan untuk menguji hubungan dasar antara dua faktor tertentu dalam suatu konteks spesifik. Biasanya, metode yang digunakan dalam penelitian ini meliputi survei, wawancara, eksperimen skala kecil, atau observasi langsung.
 
-Keunggulan dari simple research adalah kemudahannya dalam perancangan dan analisis data. Karena hanya ada sedikit variabel yang terlibat, peneliti dapat lebih fokus dalam mengontrol faktor-faktor lain yang mungkin mempengaruhi hasil penelitian. Namun, keterbatasannya terletak pada kurangnya kompleksitas, sehingga penelitian ini kurang cocok untuk menganalisis fenomena yang lebih luas dan kompleks.
+Keunggulan dari *simple research* adalah kemudahannya dalam perancangan dan analisis data. Karena hanya ada sedikit variabel yang terlibat, peneliti dapat lebih fokus dalam mengontrol faktor-faktor lain yang mungkin mempengaruhi hasil penelitian. Namun, keterbatasannya terletak pada kurangnya kompleksitas, sehingga penelitian ini kurang cocok untuk menganalisis fenomena yang lebih luas dan kompleks.
 
 ### Riset Primer Multipel
 
-Riset primer multipel adalah penelitian yang melibatkan lebih dari satu variabel independen yang dapat mempengaruhi variabel dependen. Jenis penelitian ini lebih kompleks karena mempertimbangkan berbagai faktor yang mungkin berinteraksi satu sama lain dalam suatu fenomena tertentu. Oleh karena itu, metode yang digunakan dalam multiple research sering kali lebih canggih dan memerlukan analisis statistik yang lebih mendalam.
+Riset primer multipel adalah penelitian yang melibatkan lebih dari satu variabel independen yang dapat mempengaruhi variabel dependen. Jenis penelitian ini lebih kompleks karena mempertimbangkan berbagai faktor yang mungkin berinteraksi satu sama lain dalam suatu fenomena tertentu. Oleh karena itu, metode yang digunakan dalam *multiple research* sering kali lebih canggih dan memerlukan analisis statistik yang lebih mendalam.
 
-Keunggulan dari multiple research adalah kemampuannya untuk memberikan pemahaman yang lebih komprehensif terhadap suatu fenomena. Dengan mempertimbangkan berbagai faktor secara bersamaan, penelitian ini dapat menghasilkan wawasan yang lebih mendalam dan akurat. Namun, tantangannya adalah kompleksitas dalam desain penelitian, pengumpulan data yang lebih besar, serta kebutuhan akan teknik analisis yang lebih canggih untuk menginterpretasi hasil dengan benar.
+Keunggulan dari *multiple research* adalah kemampuannya untuk memberikan pemahaman yang lebih komprehensif terhadap suatu fenomena. Dengan mempertimbangkan berbagai faktor secara bersamaan, penelitian ini dapat menghasilkan wawasan yang lebih mendalam dan akurat. Namun, tantangannya adalah kompleksitas dalam desain penelitian, pengumpulan data yang lebih besar, serta kebutuhan akan teknik analisis yang lebih canggih untuk menginterpretasi hasil dengan benar.
 
 ## Regresi Univariat dan Multivariat
 
@@ -24,7 +24,7 @@ Regresi adalah metode statistik yang digunakan untuk menganalisis hubungan antar
 
 Dalam penelitian kuantitatif, regresi sangat penting untuk menguji hipotesis dan menjelaskan pola hubungan dalam data. Dengan menggunakan teknik regresi, peneliti dapat mengukur kekuatan hubungan antarvariabel serta menentukan apakah hubungan tersebut bersifat signifikan secara statistik. Oleh karena itu, regresi sering kali menjadi alat utama dalam penelitian ilmiah, terutama yang melibatkan data numerik.
 
-Terdapat berbagai jenis regresi, tetapi dua yang paling umum digunakan adalah regresi univariate dan regresi multivariate. Regresi univariate hanya melibatkan satu variabel independen, sedangkan regresi multivariate melibatkan lebih dari satu variabel independen. Pemilihan jenis regresi tergantung pada kompleksitas hubungan yang ingin dianalisis dalam penelitian.
+Terdapat berbagai jenis regresi, tetapi dua yang paling umum digunakan adalah regresi univariat dan regresi multivariat. Regresi univariat hanya melibatkan satu variabel independen, sedangkan regresi multivariate melibatkan lebih dari satu variabel independen. Pemilihan jenis regresi tergantung pada kompleksitas hubungan yang ingin dianalisis dalam penelitian.
 
 ### Regresi Univariat
 
@@ -34,7 +34,7 @@ model regresi akan berbentuk:
 
 ::: {style="text-align: center;"}
  `Y = a + bX + e` 
-::: 
+:::
 
 Keterangan :
 
@@ -52,13 +52,13 @@ Kelebihan regresi univariate adalah kemudahannya dalam interpretasi, karena hany
 
 ### Regresi Multivariat
 
-Regresi multivariate melibatkan lebih dari satu variabel independen yang dianalisis terhadap variabel dependen. Jenis regresi ini digunakan ketika peneliti ingin memahami pengaruh beberapa faktor sekaligus terhadap satu hasil tertentu. Dalam penelitian yang lebih kompleks, regresi multivariate memungkinkan analisis hubungan yang lebih akurat dibandingkan regresi univariate.
+Regresi multivariat melibatkan lebih dari satu variabel independen yang dianalisis terhadap variabel dependen. Jenis regresi ini digunakan ketika peneliti ingin memahami pengaruh beberapa faktor sekaligus terhadap satu hasil tertentu. Dalam penelitian yang lebih kompleks, regresi multivariat memungkinkan analisis hubungan yang lebih akurat dibandingkan regresi univariate.
 
 Model regresinya akan berbentuk :
 
 ::: {style="text-align: center;"}
 `Y = a + b1.X1 + b2.X2 + e` 
-::: 
+:::
 
 Keterangan :
 

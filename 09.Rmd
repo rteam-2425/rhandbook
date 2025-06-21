@@ -4,7 +4,7 @@ editor_options:
     wrap: 72
 ---
 
-# Robvis Tool for Visualization
+# Robvis *Tool for Visualization*
 
 robvis adalah aplikasi web yang dirancang untuk memvisualisasikan
 penilaian risiko bias yang dilakukan sebagai bagian dari tinjauan
@@ -43,53 +43,53 @@ format sebagai berikut:
 
     ![](images/Screenshot%202025-06-11%20170630.png)
 
--   Buka unduhan pada file explorer atau upload pada sebagai google
+-   Buka unduhan pada *file explorer* atau *upload* pada sebagai google
     sheet untuk menyunting data
 
     ![](images/Screenshot%202025-06-11%20170702.png)
 
 ## Mengunggah data
 
--   Setelah disunting sesuai dengan penilaian anda, klik “upload your
-    data”
+-   Setelah disunting sesuai dengan penilaian anda, klik “*upload your
+    data*”
 
     ![](images/Screenshot%202025-06-11%20170729.png)
 
--   Klik “choose”
+-   Klik “*choose*”
 
     ![](images/Screenshot%202025-06-11%20170810.png)
 
--   Pilih penilaian risk of bias yang sesuai
+-   Pilih penilaian *risk of bias* yang sesuai
 
-    ![](images/Screenshot 2025-06-11 170905.png)
+    ![](images/Screenshot%202025-06-11%20170905.png)
 
--   Klik “browse”
+-   Klik “*browse*”
 
-    ![](images/Screenshot 2025-06-11 170935.png)
+    ![](images/Screenshot%202025-06-11%20170935.png)
 
 -   Unggah data anda
 
-    ![](images/Screenshot 2025-06-11 171029.png)
+    ![](images/Screenshot%202025-06-11%20171029.png)
 
 -   Tinjau ulang
 
-    ![](images/Screenshot 2025-06-11 171047.png)
+    ![](images/Screenshot%202025-06-11%20171047.png)
 
-## Visualisasi risk of bias
+## Visualisasi *risk of bias*
 
--   Klik “Generate Plots”
+-   Klik “*Generate Plots*”
 
-    ![](images/Screenshot 2025-06-11 171120.png){width="321"}
+    ![](images/Screenshot%202025-06-11%20171120.png){width="321"}
 
--   Klik “Download Plots”
+-   Klik “*Download Plots*”
 
-    ![](images/Screenshot 2025-06-11 171149.png)
+    ![](images/Screenshot%202025-06-11%20171149.png)
 
--   Plots akan otomatis tersimpan dalam file explorer anda
+-   Plots akan otomatis tersimpan dalam *file explorer* anda
 
--   Apabila anda ingin summary plot, maka klik “summary plot” lalu klik
-    “download plot”
+-   Apabila anda ingin *summary plot*, maka klik “*summary plot*” lalu
+    klik “*download plo*t”
 
-    ![](images/Screenshot 2025-06-11 171209.png)
+    ![](images/Screenshot%202025-06-11%20171209.png)
 
--   Plot akan otomatis tersimpan dalam file explorer anda
+-   Plot akan otomatis tersimpan dalam *file explorer* anda

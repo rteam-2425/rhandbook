@@ -31,25 +31,25 @@ heterogenitas, terutama jika nilai proporsi mendekati 0% atau 100%.
 
 Data yang digunakan dalam meta-analisis proporsional biasanya terdiri
 dari jumlah kejadian dan total sampel dalam masing-masing studi.
-Transformasi seperti Freeman-Tukey Double Arcsine digunakan untuk
+Transformasi seperti Freeman-Tukey *Double Arcsine* digunakan untuk
 menstabilkan varians sebelum analisis dilakukan.
 
 Contoh Kode R untuk Meta-Analisis Proporsional
 
-1.  Instalasi package
+1.  Instalasi *package*
 
     ``` r
     install.packages(c("meta","metafor")) 
     ```
 
-2.  Pemanggilan package
+2.  Pemanggilan *package*
 
     ``` r
     library(meta)
     library(metafor) 
     ```
 
-3.  Memasukkan data dalam bentuk data frame
+3.  Memasukkan data dalam bentuk *data frame*
 
     ``` r
     data_prop <- data.frame(study = c("Studi 1", "Studi 2", "Studi 3", "Studi 4"), events = c(50, 30, 70, 90),total = c(100, 80, 150, 200)) 
@@ -69,13 +69,13 @@ Contoh Kode R untuk Meta-Analisis Proporsional
 
 6.  Hasil
 
-    ``` R
+    ``` r
     summary(meta_prop)
     ```
 
-7.  Forest plot
+7.  *Forest plot*
 
-    ``` R
+    ``` r
     forest(meta_prop)
     ```
 

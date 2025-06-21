@@ -1,8 +1,8 @@
 # Meta-Analisis Data Biner
 
-Dalam dunia medis dan epidemiologi, Odds Ratio (OR) dan Risk Ratio (RR) merupakan dua ukuran statistik yang sering digunakan untuk mengevaluasi hubungan antara faktor risiko dan suatu kejadian. Kedua ukuran ini sangat penting dalam penelitian klinis, terutama dalam studi kohort dan studi kasus-kontrol. OR dan RR biasanya digunakan untuk data - data yang bersifat dikotomus. Data hasil dikotomis (biner) muncul ketika setiap peserta dalam penelitian memiliki salah satu dari dua kemungkinan hasil, seperti hidup atau mati, atau perbaikan klinis atau tidak.
+Dalam dunia medis dan epidemiologi, *Odds Ratio* (OR) dan *Risk Ratio* (RR) merupakan dua ukuran statistik yang sering digunakan untuk mengevaluasi hubungan antara faktor risiko dan suatu kejadian. Kedua ukuran ini sangat penting dalam penelitian klinis, terutama dalam studi kohort dan studi kasus-kontrol. OR dan RR biasanya digunakan untuk data - data yang bersifat dikotomus. Data hasil dikotomis (biner) muncul ketika setiap peserta dalam penelitian memiliki salah satu dari dua kemungkinan hasil, seperti hidup atau mati, atau perbaikan klinis atau tidak.
 
-Ketika membahas Odds Ratio (OR) dan Risk Ratio (RR) dalam analisis data dikotomis, kita selalu merujuk pada tabel 2×2. Tabel ini digunakan untuk menyajikan hubungan antara intervensi (atau paparan) dengan hasil klinis, sehingga memudahkan perhitungan ukuran efek.
+Ketika membahas *Odds Ratio* (OR) dan *Risk Ratio* (RR) dalam analisis data dikotomis, kita selalu merujuk pada tabel 2×2. Tabel ini digunakan untuk menyajikan hubungan antara intervensi (atau paparan) dengan hasil klinis, sehingga memudahkan perhitungan ukuran efek.
 
 Berikut adalah tampilan tabel 2×2 yang sering digunakan dalam analisis data klinis:
 
@@ -14,15 +14,15 @@ Berikut adalah tampilan tabel 2×2 yang sering digunakan dalam analisis data kli
 
 ## Definisi dan Konsep Dasar
 
-### Odds Ratio
+### *Odds Ratio*
 
-Odds Ratio (OR) adalah ukuran yang membandingkan kemungkinan terjadi dan tidak terjadinya suatu peristiwa pada kelompok yang terpapar dengan tidak terpapar. OR sering digunakan dalam studi kasus-kontrol karena tidak bergantung pada insidensi penyakit dalam populasi. OR dapat dihitung menggunakan rumus berikut.
+*Odds Ratio* (OR) adalah ukuran yang membandingkan kemungkinan terjadi dan tidak terjadinya suatu peristiwa pada kelompok yang terpapar dengan tidak terpapar. OR sering digunakan dalam studi kasus-kontrol karena tidak bergantung pada insidensi penyakit dalam populasi. OR dapat dihitung menggunakan rumus berikut.
 
 ![](images/Screenshot%202025-06-11%20180023.png){width="184"}
 
-### Risk Ratio
+### *Risk Ratio*
 
-Risk Ratio (OR) adalah ukuran yang membandingkan kemungkinan terjadinya suatu peristiwa pada populasi terpapar dengan tidak terpapar. RR sering digunakan dalam studi kohort atau eksperimen. RR dapat dihitung menggunakan rumus berikut.
+*Risk Ratio* (OR) adalah ukuran yang membandingkan kemungkinan terjadinya suatu peristiwa pada populasi terpapar dengan tidak terpapar. RR sering digunakan dalam studi kohort atau eksperimen. RR dapat dihitung menggunakan rumus berikut.
 
 ![](images/Screenshot%202025-06-11%20180444.png){width="188"}
 
@@ -30,17 +30,17 @@ Risk Ratio (OR) adalah ukuran yang membandingkan kemungkinan terjadinya suatu pe
 
 ### Data
 
-Setelah mengunduh data dummy berjudul “metabin” atau dapat diakses pada [halaman ini](https://docs.google.com/spreadsheets/d/1rMy3upWNEntpVm_6xFa_SGMVoCnbFMah8jRQ1L45Fko/edit?gid=0#gid=0), buka RStudio klik pilihan “Import Dataset” pada menu “Environment”. Kemudian, klik “From Excel”. Kemudian, klik “Browse” pada ujung kanan atas. Setelah itu, pilih file yang diinginkan. Lalu, klik “Import”".
+Setelah mengunduh data dummy berjudul “metabin” atau dapat diakses pada [halaman ini](https://docs.google.com/spreadsheets/d/1rMy3upWNEntpVm_6xFa_SGMVoCnbFMah8jRQ1L45Fko/edit?gid=0#gid=0), buka RStudio klik pilihan “*Import Dataset*” pada menu “*Environment*”. Kemudian, klik “*From Excel*”. Kemudian, klik “*Browse*” pada ujung kanan atas. Setelah itu, pilih *file* yang diinginkan. Lalu, klik “*Import*”.
 
 ### Melakukan Meta-Analisis
 
-1.  Instalasi package hanya perlu dilakukan satu kali saja, bila sudah pernah dilakukan, maka hanya perlu melakukan pemanggilan package
+1.  Instalasi *package* hanya perlu dilakukan satu kali saja, bila sudah pernah dilakukan, maka hanya perlu melakukan pemanggilan package
 
     ``` r
     install.package(c(“readx1”,“meta”))
     ```
 
-2.  Pemanggilan package
+2.  Pemanggilan *package*
 
     ``` r
     library(readx1) 
@@ -95,9 +95,9 @@ Details of meta-analysis methods:
 - Calculation of I^2 based on Q
 ```
 
-5.  Membuat forest plot
+5.  Membuat *forest plot*
 
-    ``` R
+    ``` r
     forest(m.bin)
     ```
 

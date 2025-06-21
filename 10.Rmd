@@ -50,7 +50,7 @@ kekuatan bukti terhadap hipotesis nol bahwa karakteristik tersebut tidak
 terkait dengan efek intervensi. Meta-regresi dapat dilakukan menggunakan
 makro "metareg" yang tersedia dalam paket statistik Stata, atau
 menggunakan paket “meta” atau "metafor" untuk R, serta paket dan
-software lainnya.
+*software* lainnya.
 
 ## Meta Regresi pada R
 
@@ -60,7 +60,7 @@ membutuhkan objek meta-analisis dari paket meta dan nama kovariat yang
 ingin dianalisis. Dalam contoh ini, kita ingin melihat apakah tahun
 publikasi suatu studi dapat digunakan untuk memprediksi ukuran efeknya.
 Untuk itu, kita akan menggunakan objek meta-analisis m.gen dengan data
-dummy bernama
+*dummy* bernama
 [metabin](https://docs.google.com/spreadsheets/d/1rMy3upWNEntpVm_6xFa_SGMVoCnbFMah8jRQ1L45Fko/edit?gid=0#gid=0).
 
 ### Import Data & Membuat Meta Analisis
@@ -70,19 +70,20 @@ yang dibutuhkan sudah dimasukkan ke dalam excel (penjelasan lebih
 lengkap mengenai meta analisis data biner dapat dibuka pada bagian
 terkait).
 
-Setelah mengunduh data dummy berjudul “metabin”, buka RStudio klik
-pilihan “Import Dataset” pada menu “Environment”. Kemudian, klik “From
-Excel”. Kemudian, klik “Browse” pada ujung kanan atas. Setelah itu,
-pilih file yang diinginkan. Lalu, klik “Import”".
+Setelah mengunduh data *dummy* berjudul “metabin”, buka RStudio klik
+pilihan “*Import Datase*t” pada menu “*Environmen*t”. Kemudian, klik
+“*From Excel*”. Kemudian, klik “*Browse*” pada ujung kanan atas. Setelah
+itu, pilih file yang diinginkan. Lalu, klik “*Import*”.
 
-1.  Install package: hanya perlu dilakukan satu kali saja, bila sudah
-    pernah dilakukan, maka hanya perlu melakukan pemanggilan package
+1.  *Install* *package*: hanya perlu dilakukan satu kali saja, bila
+    sudah pernah dilakukan, maka hanya perlu melakukan pemanggilan
+    package
 
     ``` r
     install.package(c(“readx1”,"meta"))
     ```
 
-2.  Pemanggilan package
+2.  Pemanggilan *package*
 
     ``` r
     library(readx1) 
@@ -137,13 +138,13 @@ Details of meta-analysis methods:
 - Calculation of I^2 based on Q
 ```
 
-5.  Membuat forest plot
+5.  Membuat *forest plot*
 
     ``` r
     forest(m.bin)
     ```
 
-    ![](images/Screenshot 2025-06-11 173348.png)
+    ![](images/Screenshot%202025-06-11%20173348.png)
 
 6.  Melakukan Meta Regresi
 
@@ -198,9 +199,9 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 Sekarang, kita telah menyelesaikan model dan mendapatkan beberapa hasil
 yang bisa kita pahami. Model ini menggunakan data dari 10 studi dan
-menghitung heterogenitas dengan metode Penalized Maximization (PM).
+menghitung heterogenitas dengan metode *Penalized Maximization* (PM).
 Model campuran ini digunakan karena kita ingin melihat pengaruh dari
-efek tetap (fixed effect) dan efek acak (random effect) secara
+efek tetap (*fixed effect*) dan efek acak (*random effect*) secara
 bersamaan. Heterogenitas residual, yang mengukur seberapa besar
 variabilitas yang belum dapat dijelaskan, ditemukan sebesar 0.0163,
 dengan standar error 0.0179. Ini menunjukkan bahwa ada sedikit variasi
@@ -224,9 +225,9 @@ p-value 0.0201, yang berarti masih ada variasi yang tidak bisa
 dijelaskan setelah mempertimbangkan moderator. Sedangkan uji untuk
 moderator menunjukkan bahwa tahun publikasi memang mempengaruhi ukuran
 efek, dengan p-value 0.0132 yang signifikan. Untuk hasil model, kita
-menemukan bahwa interceptnya adalah 111.1706, yang bisa diartikan bahwa
-jika tahun adalah nol, ukuran efeknya adalah sekitar 111.17. Meskipun
-ini mungkin tidak realistis, ini berfungsi sebagai titik dasar.
+menemukan bahwa *intercept*nya adalah 111.1706, yang bisa diartikan
+bahwa jika tahun adalah nol, ukuran efeknya adalah sekitar 111.17.
+Meskipun ini mungkin tidak realistis, ini berfungsi sebagai titik dasar.
 
 Sedangkan untuk moderator tahun, koefisien yang didapat adalah -0.0545,
 yang berarti setiap penambahan tahun akan menurunkan ukuran efek sebesar
@@ -251,11 +252,11 @@ memasukkan objek meta-regresi ke dalam fungsi bubble. Jika kita ingin
 menampilkan label studi pada plot, kita bisa menambahkan argumen studlab
 = TRUE.
 
-``` R
+``` r
 bubble(m.gen.reg.year, studlab = TRUE)
 ```
 
-![](images/Screenshot 2025-06-11 173535.png){width="424"}
+![](images/Screenshot%202025-06-11%20173535.png){width="424"}
 
 **Referensi**
 
